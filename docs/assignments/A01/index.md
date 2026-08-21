@@ -12,42 +12,6 @@ it without asking me questions (*Communicate*).
 
 ---
 
-## Decide — three documented decisions
-
-### Decision 1 — Homepage identity
-
-The homepage is for the grader and the recruiter. The first is the grader, who arrives needing to
-locate a specific assignment and look at the standard. The second is a recruiter, who arrives at the
-website from my resume link. Both readers need the same three facts before anything else: what the
-portfolio contains, which is eleven assignments; how each assignment is organized; and what standard
-the record holds itself to. Biography is not included at the top of the page and sits in the About Me
-section below the fold. That matters because the reader sees what the document is before seeing who
-wrote it, which gives them the context to judge it.
-
-### Decision 2 — One intentional customization: navigation labels
-
-**What I changed.** In `mkdocs.yml`, the sidebar links for assignments were just `A1` through `A11`.
-I changed them to include the subject, like `A1 — Portfolio & Product Analysis`.
-
-**What it fixes.** Task A defines navigability as finding a specific piece of work in under 60
-seconds. `A5` by itself tells you nothing. If you are looking for the bending stiffness work, you
-have to open pages one at a time until you hit it — up to eleven page loads. With the subject in the
-label, the sidebar *is* the index, and you find it in one look instead of one search.
-
-**Why the default did not work.** Plain numbers stay the same across every student's portfolio in
-the class, which helps a grader jumping between them. That is optimizing for sameness across sites.
-It does nothing for one person reading this site looking for a topic. Where those two pull against
-each other, I am building for my reader.
-
-### Decision 3 — My documentation standard
-
-> Every assignment on this site will state the governing model and its variables, the numbers and
-> units I used, the assumption that makes the model valid, and the option I rejected along with the
-> reason I rejected it — so a reader can redo my work and argue with my choice without having to ask
-> me anything.
-
----
-
 ## Analyze
 
 ### Task A — Portfolio analysis
@@ -295,6 +259,42 @@ contact patch spread out as the load goes up, so `A` grows with `F` and the peak
 more slowly. The requirement it satisfies is *how hard you can actually squeeze before it hurts*,
 and it satisfies it without touching the lever, the blade, or the steel — which is what makes it a
 cheap change to make.
+
+---
+
+## Decide
+
+### Decision 1 — Homepage identity
+
+The homepage is for the grader and the recruiter. The first is the grader, who arrives needing to
+locate a specific assignment and look at the standard. The second is a recruiter, who arrives at the
+website from my resume link. Both readers need the same three facts before anything else: what the
+portfolio contains, which is eleven assignments; how each assignment is organized; and what standard
+the record holds itself to. Biography is not included at the top of the page and sits in the About Me
+section below the fold. That matters because the reader sees what the document is before seeing who
+wrote it, which gives them the context to judge it.
+
+### Decision 2 — One intentional customization: navigation labels
+
+**What I changed.** In `mkdocs.yml`, the sidebar links for assignments were just `A1` through `A11`.
+I changed them to include the subject, like `A1 — Portfolio & Product Analysis`.
+
+**What it fixes.** Task A defines navigability as finding a specific piece of work in under 60
+seconds. `A5` by itself tells you nothing. If you are looking for the bending stiffness work, you
+have to open pages one at a time until you hit it — up to eleven page loads. With the subject in the
+label, the sidebar *is* the index, and you find it in one look instead of one search.
+
+**Why the default did not work.** Plain numbers stay the same across every student's portfolio in
+the class, which helps a grader jumping between them. That is optimizing for sameness across sites.
+It does nothing for one person reading this site looking for a topic. Where those two pull against
+each other, I am building for my reader.
+
+### Decision 3 — My documentation standard
+
+> Every assignment on this site will state the governing model and its variables, the numbers and
+> units I used, the assumption that makes the model valid, and the option I rejected along with the
+> reason I rejected it — so a reader can redo my work and argue with my choice without having to ask
+> me anything.
 
 ---
 
