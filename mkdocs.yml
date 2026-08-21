@@ -1,5 +1,5 @@
-site_name: MEGR 2157 – Design Portfolio
-site_description: Design portfolio documentation, built with the Analyze / Decide / Communicate framework
+site_name: MEGR 2156/2157 – Shamar Lindo Design Portfolio
+site_description: Engineering design record built on the Analyze / Decide / Communicate framework
 
 theme:
   name: material
@@ -9,13 +9,15 @@ theme:
     - navigation.instant
     - navigation.tracking
 
+# Assignment entries are labelled by subject rather than index number alone.
+# See A1 -> Decide -> Decision 2 for the functional justification.
 nav:
   - Home: index.md
-  - About Me: aboutme/index.md
+  - About Me: https://shamardlindo1.github.io/-megr2157-portfolio/#about-me
   - Portfolio Overview: portfolio-overview.md
   - Assignments:
-      - A1: assignments/A01/index.md
-      - A2: assignments/A02/index.md
+      - A1 — Portfolio & Product Analysis: assignments/A01/index.md
+      - A2 — Truss Analysis: assignments/A02/index.md
       - A3: assignments/A03/index.md
       - A4: assignments/A04/index.md
       - A5: assignments/A05/index.md
@@ -24,4 +26,12 @@ nav:
       - A8: assignments/A08/index.md
       - A9: assignments/A09/index.md
       - A10: assignments/A10/index.md
-      - A11: assignments/A11/index.md
+      - A11: assignments/a11/index.md
+
+markdown_extensions:
+  - toc:
+      toc_depth: 2
+  - tables
+  - attr_list
+  - md_in_html
+  - admonition
