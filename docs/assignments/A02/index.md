@@ -370,11 +370,12 @@ both equations had to come out zero, and they did — which is exactly what made
 the joint solution trustworthy. Two independent routes to the same number is worth more
 than one route done carefully.
 
-Next time I would build the checks in from the start rather than reaching for them when
-something already looks wrong: verify determinacy before sketching, and never accept a
-number I could not roughly predict beforehand.
 
-A zero-force member is not a useless member. AC carries nothing under this load and I
+Next time I do something like this, I will be doing all the checks I need beforehand rather than getting 
+to the point where the mistake is evident. Verifying the things before sketching and never accepting a 
+number that wasn't predictable
+
+A zero-force member is not a useless member. AC carries nothing under this load, and I
 nearly concluded I had made an error. It exists to make the structure rigid, and it would
 carry load immediately under any unsymmetric case. Zero force in one load case is not the
 same as unnecessary.
