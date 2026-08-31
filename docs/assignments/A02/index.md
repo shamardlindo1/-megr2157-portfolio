@@ -53,8 +53,6 @@ drop out of the equation.
 
 ![Handwritten reaction calculations: moments about A, then vertical and horizontal equilibrium](img/p02.jpg)
 
-```
-```
 
 With P = 25 kN: A_x = 0, A_y = 25.0 kN up, B_y = 25.0 kN up.
 
@@ -72,10 +70,6 @@ the joint toward the far end of the member.
 
 I started at joint B because it has only two unknown member forces. With
 `L1 = sqrt(a² + b²) = 0.5 m`, the unit vector from B toward C is `(a, −b)/L1`:
-
-```
-
-```
 
 The negative sign means the top chord is in compression, which matches intuition: the
 diagonals hang the load below the supports and push them apart, and AB resists that.
