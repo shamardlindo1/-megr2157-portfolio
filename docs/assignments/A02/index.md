@@ -154,11 +154,7 @@ which the handout calls `F_t`.
 ![Deriving the joint resultant F_t from P and F_1](img/p08.jpg)
 
 ```
-F_t = sqrt(P² + F_1²)
 
-at joint B, with F_1 = F_BA = P a / b:
-F_t = sqrt(P² + (P a/b)²) = P sqrt(a² + b²)/b
-    = sqrt(25² + 33.33²) = 41.67 kN
 ```
 
 Because the truss is symmetric, every joint returns the same resultant. There is no
@@ -171,11 +167,7 @@ I had combined the vectors correctly.
 ![My free body diagram of the single shear connection and the pin cut at the shear plane](img/p09.jpg)
 
 ```
-tau = F_t / A        tau_allow = S_y / SF
-A = F_t (SF) / S_y
 
-A_p = (41667)(4) / (1172e6) = 142.2 mm²
-d   = sqrt(4 A_p / pi) = 13.46 mm   →   specify d = 14 mm
 ```
 
 ![Symbolic solution for the required pin area and diameter](img/p10.jpg)
@@ -224,11 +216,7 @@ about 25 %.
 ![Pin masses for the two pin lengths and the combined pin weight](img/p12.jpg)
 
 ```
-A_pin = (pi/4)(0.014)² = 1.539e-4 m²
-50 mm pin: 7695 × 1.539e-4 × 0.050 = 0.0592 kg each
-75 mm pin: 7695 × 1.539e-4 × 0.075 = 0.0888 kg each
 
-m_pins = 2(0.0592) + 2(0.0888) = 0.296 kg     W_pins = 2.91 N
 ```
 
 Total: 14.34 + 0.30 = 14.64 kg = 143.6 N (32.3 lbf).
