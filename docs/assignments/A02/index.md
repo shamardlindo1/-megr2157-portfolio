@@ -386,9 +386,8 @@ knowing what that assumption cost me is different from not knowing it was there.
 
 ### Time
 
-This took me about 7 hours from start to finish. The analysis itself was not the slow
-part — the symbolic work went quickly once the geometry was settled. What ate the time was
-everything around it: rejecting the four-member layout and starting over, rebuilding the
-pin weight after realising the lengths were not all the same, and the documentation, which
-took longer than expected because every figure and calculation had to be redone cleanly
-enough to be read by someone who was not me.
+
+This assignment in its entirety took me about 9 hrs finish. This entire assignment took a 
+while to create; overall a long assignment. What took the most time was rebuilding the pin weight 
+after the lengths were not the same and also documentation. Getting every little thing down 
+while showing all the figures and calculations. Also, make sure the calculations are readable.
