@@ -250,6 +250,58 @@ The diameter is set by the shear load and is identical everywhere; only the leng
 the joint. Even corrected, the pins are 2.0 % of the assembly mass, so specifying an
 expensive hardened tool steel at the joints costs almost nothing in weight.
 
+### Building the model in SolidWorks
+
+My first attempt was to sketch the geometry by hand, and that went badly in a way worth recording. When you draw a line, SolidWorks watches the cursor and quietly adds relations it thinks you want — horizontal, coincident, equal. It decided the top chord AB and the bottom chord CD should be *equal length*. They are 1200 mm and 400 mm. Every time I deleted that relation and added a dimension, another inferred relation appeared somewhere else and the sketch either over-defined or shifted.
+
+So I built it with a VBA macro instead. The important line is `SketchManager.AddToDB = True`, which writes geometry straight into the model database with inference switched off. Nothing is snapped and nothing is guessed, so every coordinate lands exactly where the calculation puts it. The macro draws each member as its own 23 mm wide rectangle centred on its centreline, extrudes each one 23 mm and merges them, which gives a true 23 x 23 mm square section on all five members and a single solid body.
+
+![The finished truss in SolidWorks, five members merged into one solid body](img/cad-truss-iso.jpg)
+
+The macro also recomputes the sizing from `a`, `b` and `P` rather than using hard-coded numbers, and reports them when it finishes. It returned `F_max` = 41.67 kN, `A_min` = 502.9 mm^2 and `d` = 13.46 mm — an independent check on the hand calculations, the same three numbers arrived at twice by different routes.
+
+Two bugs on the way, both worth recording because both failed silently. `GetUserPreferenceStringValue(9)` returns the *assembly* template rather than the part template, so the first run quietly built an assembly. And a mid-plane end condition made every extrusion fail with no error at all, leaving five sketches stacked up and no solid body — the only visible symptom was a reported volume of zero. Switching to a blind extrusion fixed it.
+
+### The material
+
+A500 is not in the SolidWorks material library, and neither is a tool steel at the density this assignment specifies. Both had to be built by hand: Edit Material, copy Plain Carbon Steel, create a custom library, paste, rename and edit the properties.
+
+![The custom ASTM A500 Gr. B material with density 7850 and yield strength 290 entered](img/cad-material.jpg)
+
+For the truss I set mass density to 7850 kg/m^3 and yield strength to 290 N/mm^2, the 2.9e8 Pa used in the sizing. For the pins I set density to 7695 kg/m^3, the 0.278 lb/in^3 given in the assignment. The built-in tool steels sit around 7800 kg/m^3 and would have skewed the weight comparison.
+
+One honest gap: the assignment gives the pin material a yield *shear* strength of 170 ksi, and SolidWorks has no field for shear strength — only shear modulus, which is a different quantity. I left it out rather than putting the number in a box where it does not belong. It has no effect on mass properties, which is all the model is being used for.
+
+![The 50 mm pin part, 14 mm diameter, with the hardened tool steel material applied](img/cad-pin.jpg)
+
+### Comparing the model against my calculations
+
+![The Mass Properties panel for the truss: 13822.30 grams and 1760802.66 cubic millimetres](img/cad-massprops.jpg)
+
+```
+Part4 (truss)      Mass = 13822.30 g   Volume = 1760802.66 mm^3
+Part5 (75 mm pin)  Mass =    88.84 g   Volume =   11545.35 mm^3
+Part6 (50 mm pin)  Mass =    59.23 g   Volume =    7696.90 mm^3
+
+truss           13822.30 g
+2 x 75 mm pin     177.68 g
+2 x 50 mm pin     118.46 g
+                ----------
+TOTAL           14118.44 g  =  14.118 kg  =  138.50 N
+```
+
+| Quantity | By hand | SolidWorks | Difference |
+|---|---|---|---|
+| Truss volume | 1 827 378 mm^3 | 1 760 803 mm^3 | -3.6 % |
+| Truss mass | 14.34 kg | 13.82 kg | -3.6 % |
+| Four pins | 0.296 kg | 0.296 kg | 0.0 % |
+| Total mass | 14.64 kg | 14.118 kg | -3.6 % |
+| Total weight | 143.6 N | 138.50 N | -3.6 % |
+
+The model came in 3.6 % lighter than my hand calculation, and that gap is explained rather than worrying. My hand calculation multiplies the 529 mm^2 section by the full centreline length of all five members, which counts the material where two members overlap at a joint twice. SolidWorks merges the five extrusions into a single solid body, so that shared corner volume is counted once. Five joints worth of double counting comes to about 67 000 mm^3, which is the difference.
+
+The pins match to three decimal places, and that is the check that the discrepancy really is joint overlap: the pins are separate cylinders that intersect nothing, so there is no shared volume for the hand calculation to double count, and the two methods agree exactly. A model that came out *heavier* than the hand calculation would have meant something was wrong — most likely the material density not applied, or a profile still at its default size.
+
 ---
 
 ## Decide
@@ -295,7 +347,9 @@ layout. The one real lever — a deeper truss — was fixed at `b` = 0.3 m.
 | Achieved pin SF | | 4.33 |
 | Truss weight | | 14.34 kg, 140.7 N |
 | Pin weight | | 0.296 kg, 2.91 N |
-| **Total** | | **14.64 kg, 143.6 N** |
+| **Total (hand)** | | **14.64 kg, 143.6 N** |
+| Total (SolidWorks) | | 14.118 kg, 138.50 N |
+| Difference | | -3.6 %, joint overlap |
 
 ### Lessons learned
 
