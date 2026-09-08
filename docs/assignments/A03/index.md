@@ -221,9 +221,6 @@ interesting part of this assignment.
 
 ![von Mises stress in psi, maximum 5,243 psi](img/sw-vonmises.jpg)
 
-The drawing of the finished part, with the cross-section, side elevation and
-isometric on a B-size sheet: [A3 design](A3_Design.pdf)
-
 ## Decide
 
 The final design is a 2.00 x 3.00 in hollow box with 0.25 in walls, 35.5 in long, in
@@ -309,3 +306,14 @@ best possible outcome.
 ### Time spent
 
 This assignment took me about 6 hours, with breaks.
+
+Below I have provided the files for my hollow box beam design:
+
+[Click here to download A3_Beam.SLDPRT](A3_Beam.SLDPRT) — the part itself, with the
+global variables and equations still live, so the length re-solves if you change the
+load or the section.
+
+[Click here to download A3_Beam.SLDDRW](A3_Beam.SLDDRW) — the drawing file.
+
+[Click here to download the A3 design drawing](A3_Design.pdf) — the same drawing as a
+PDF, if you would rather just look at it than open SolidWorks.
