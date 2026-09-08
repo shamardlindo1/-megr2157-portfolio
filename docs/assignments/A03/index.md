@@ -221,6 +221,9 @@ interesting part of this assignment.
 
 ![von Mises stress in psi, maximum 5,243 psi](img/sw-vonmises.jpg)
 
+The drawing of the finished part, with the cross-section, side elevation and
+isometric on a B-size sheet: [A3 design](A3_Design.pdf)
+
 ## Decide
 
 The final design is a 2.00 x 3.00 in hollow box with 0.25 in walls, 35.5 in long, in
