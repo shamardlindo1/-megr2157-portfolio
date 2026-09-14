@@ -93,11 +93,11 @@ For a cantilever with a point load at the free end:
 
 Solving for the required second moment of area:
 
-    I_req = P*L1^3 / (3*E*delta_max)
+![Required second moment of area](img/hand-f1-11.jpg)
 
 and for a rectangular section:
 
-    h_defl = ( 12*I_req / b )^(1/3)
+![Thickness required by deflection](img/hand-f1-12.jpg)
 
 ### Numerical solution
 
@@ -115,18 +115,9 @@ Deflection governs, not stress. Rounding up to a practical dimension:
 
 ### Known and unknown variables
 
-Known:
+![Known variables](img/hand-f2-01.jpg)
 
-    P = 300 N                 load handed over from Feature 1
-    M_tr = P*L1 = 12,000 N·mm moment handed over from Feature 1
-    H = 45 mm                 wall plate cantilever height (chosen)
-    b = 45 mm                 wall plate width, same as Feature 1
-    E = 2000 MPa, Sy = 45 MPa, n = 3, delta_max = 0.30 mm
-
-Unknown:
-
-    t        wall plate thickness
-    I, sigma, tau, delta
+![Unknown variables](img/hand-f2-02.jpg)
 
 ### Assumptions
 
@@ -145,52 +136,40 @@ moment is the load case that actually sizes this plate.
 Both the force and the transferred moment bend the wall plate, and the worst section is
 at the wall:
 
-    M_max = P*H + M_tr
-
-    sigma_max = 6*M_max / (b*t^2)      ->    t_stress = sqrt( 6*M_max / (b*sigma_allow) )
+![Maximum moment, bending stress and the thickness required by stress](img/hand-f2-05.jpg)
 
 ### Shear analysis
 
 A thin plate can fail in transverse shear before it fails in bending, so this is checked
 as well. For a rectangular section:
 
-    tau_max = 3*V / (2*b*t)      with V = P
+![Transverse shear stress](img/hand-f2-06.jpg)
 
 The allowable shear stress is estimated from the von Mises criterion:
 
-    tau_allow = sigma_allow / sqrt(3)
+![Allowable shear stress](img/hand-f2-03.jpg)
 
 ### Deflection analysis, solved symbolically
 
 The two loads are superposed — a point force at the free end plus an applied end moment:
 
-    delta = P*H^3/(3*E*I) + M_tr*H^2/(2*E*I)
+![Deflection by superposition](img/hand-f2-04.jpg)
 
 Solving for the required second moment of area:
 
-    I_req = ( P*H^3/3 + M_tr*H^2/2 ) / (E*delta_max)
-    t_defl = ( 12*I_req / b )^(1/3)
+![Required second moment of area and thickness](img/hand-f2-07.jpg)
 
 ### Numerical solution
 
-    M_max = 300*45 + 12,000 = 13,500 + 12,000 = 25,500 N·mm
-
-    t_stress = sqrt( 6*25,500 / (45*15) ) = sqrt(226.67) = 15.06 mm
-
-    I_req = ( 300*45^3/3 + 12,000*45^2/2 ) / (2000*0.30) = 35,437.5 mm^4
-    t_defl = ( 12*35,437.5 / 45 )^(1/3) = 21.14 mm
+![Numerical solution for the wall plate thickness](img/hand-f2-08.jpg)
 
 Deflection governs again. Rounding up:
 
-    t = 22 mm
+![Selected thickness](img/hand-f2-09.jpg)
 
 ### Checks on the selected section
 
-    I = 45*22^3/12 = 39,930 mm^4   >=  35,437.5 mm^4            PASS
-    sigma = 25,500*11/39,930 = 7.02 MPa   <=  15 MPa            PASS
-    tau = 3*300/(2*45*22) = 0.455 MPa  <=  8.66 MPa             PASS
-    delta = 0.2662 mm   <=  0.30 mm                             PASS
-    actual factor of safety = 45 / 7.02 = 6.4
+![Checks on the selected section](img/hand-f2-10.jpg)
 
 Note how small the shear stress is — 0.455 MPa against 8.66 MPa allowable. Shear was never
 going to size this plate, but checking it is what tells you that bending is the real
