@@ -292,6 +292,27 @@ yields, and sizing on stress alone would have produced a bracket far too floppy 
 
 ## Lessons learned
 
+The load that sizes a part is not always the load you were handed. Feature 1 takes a
+300 N force and that is the whole story. Feature 2 takes the same 300 N, but it also
+takes the 12,000 N·mm moment that force creates about the corner, and that moment is
+almost half of the 25,500 N·mm the wall plate actually sees. If I had carried only the
+force across the joint I would have sized the wall plate for roughly half the load and
+called it done. Drawing the second free-body diagram properly, with the transferred
+moment on it, is what caught that.
+
+Deflection governed both features again, the same as A3, but this time I expected it and
+sized on stiffness first instead of working out the strength answer and then being
+surprised. With PETG at 2,000 MPa the 0.30 mm limit runs out long before 15 MPa does, and
+both plates ended up around 7 MPa — roughly twice as strong as they need to be. That is
+not waste so much as what a stiffness requirement costs you in a compliant material.
+
+The last one is a modelling habit rather than a design one. My first extrusion silently
+produced nothing — the end condition was set to mid-plane, the model rebuilt without a
+single error, and the tree looked correct. Nothing on screen said anything was wrong. The
+only reason I caught it was checking the mass properties and seeing zero volume. A model
+that rebuilds cleanly is not the same as a model that built what you asked for, and the
+mass properties are the cheapest way to tell the difference.
+
 ## Time log
 
 This assignment took me three days from start to finish.
