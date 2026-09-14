@@ -221,10 +221,7 @@ Driven equations:
 
 Geometry driven by those variables:
 
-    "D1@Sketch1" = "t2"        ->  22 mm
-    "D2@Sketch1" = "H_total"   ->  60 mm
-    "D1@Sketch2" = "L_total"   ->  80 mm
-    "D2@Sketch2" = "h1"        ->  15 mm
+  
 
 ![The dimensions driven by the variables](img/equations-driven.jpg)
 
@@ -341,6 +338,4 @@ the assignment restricted us to.
 
 Below I have provided the file for my motor mount design:
 
-[Click here to download A4_Motor_Mount.SLDPRT](A4_Motor_Mount.SLDPRT) — the part with the
-global variables and equations still live, so both plate thicknesses re-solve if you change
-the load, the span or the material.
+[Click here to download A4_Motor_Mount.SLDPRT](A4_Motor_Mount.SLDPRT) 
