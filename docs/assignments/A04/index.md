@@ -31,13 +31,11 @@ carries a real load and has thin sections around the bolt holes.
 Published PETG properties vary with print settings, so I used conservative lower-bound
 values rather than the best numbers I could find:
 
-    E  = 2000 MPa
-    Sy = 45 MPa
-    rho = 1270 kg/m^3
+![PETG properties used](img/hand-f1-01.jpg)
 
 With the required safety factor of 3, the allowable stress is
 
-    sigma_allow = Sy / n = 45 / 3 = 15 MPa
+![Allowable stress](img/hand-f1-02.jpg)
 
 These are the values I entered into the custom PETG material in SOLIDWORKS, so the model
 and the hand calculations use the same numbers.
@@ -50,23 +48,9 @@ and the hand calculations use the same numbers.
 
 ### Known and unknown variables
 
-Known:
+![Known variables](img/hand-f1-03.jpg)
 
-    P = 300 N
-    n = 3
-    delta_max = 0.30 mm
-    E = 2000 MPa
-    Sy = 45 MPa
-    sigma_allow = 15 MPa
-    b = 45 mm        plate width (chosen)
-    L1 = 40 mm       distance from the corner to the motor centre (chosen)
-
-Unknown:
-
-    h        plate thickness
-    I        area moment of inertia
-    sigma    maximum bending stress
-    delta    free end deflection
+![Unknown variables](img/hand-f1-04.jpg)
 
 Why 45 mm wide: the motor body is Ø28 mm and the bolt circle is Ø22 mm, so the plate has
 to be at least ~36 mm across to leave material outside the bolt holes. 45 mm gives about
@@ -92,26 +76,20 @@ opening and the bolt holes, so the beam is analysed as a solid rectangular secti
 Summing forces vertically gives the reaction at the fixed end equal to the applied load.
 Taking moments about the fixed end gives the maximum bending moment, which occurs there:
 
-    R = P = 300 N
-    M_max = P * L1 = 300 * 40 = 12,000 N·mm
+![Reaction, maximum moment and the bending stress relation](img/hand-f1-05.jpg)
 
 ### Stress analysis, solved symbolically
 
-For a rectangular section of width b and thickness h:
+Setting the maximum bending stress equal to the allowable stress and solving for the
+thickness:
 
-    I = b*h^3 / 12          c = h/2
-
-    sigma_max = M*c / I = (P*L1)*(h/2) / (b*h^3/12) = 6*P*L1 / (b*h^2)
-
-Setting sigma_max equal to the allowable stress and solving for h:
-
-    h_stress = sqrt( 6*P*L1 / (b*sigma_allow) )
+![Thickness required by stress](img/hand-f1-06.jpg)
 
 ### Deflection analysis, solved symbolically
 
 For a cantilever with a point load at the free end:
 
-    delta = P*L1^3 / (3*E*I)
+![Cantilever deflection](img/hand-f1-07.jpg)
 
 Solving for the required second moment of area:
 
@@ -123,21 +101,15 @@ and for a rectangular section:
 
 ### Numerical solution
 
-    h_stress = sqrt( 6*300*40 / (45*15) ) = sqrt(106.67) = 10.33 mm
-
-    I_req = 300*40^3 / (3*2000*0.30) = 10,666.7 mm^4
-    h_defl = ( 12*10,666.7 / 45 )^(1/3) = 14.17 mm
+![Numerical solution for the thickness](img/hand-f1-08.jpg)
 
 Deflection governs, not stress. Rounding up to a practical dimension:
 
-    h = 15 mm
+![Selected thickness](img/hand-f1-09.jpg)
 
 ### Checks on the selected section
 
-    I = 45*15^3/12 = 12,656.3 mm^4   >=  10,666.7 mm^4        PASS
-    sigma = 12,000*7.5/12,656.3 = 7.11 MPa   <=  15 MPa        PASS
-    delta = 300*40^3/(3*2000*12,656.3) = 0.2528 mm  <= 0.30 mm PASS
-    actual factor of safety = 45 / 7.11 = 6.3
+![Checks on the selected section](img/hand-f1-10.jpg)
 
 ## Feature 2 – wall plate
 
