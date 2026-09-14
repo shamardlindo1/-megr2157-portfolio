@@ -87,6 +87,8 @@ opening and the bolt holes, so the beam is analysed as a solid rectangular secti
 
 ### Free-body diagram
 
+![Feature 1 free-body diagram](img/fbd-feature1.jpg)
+
 Summing forces vertically gives the reaction at the fixed end equal to the applied load.
 Taking moments about the fixed end gives the maximum bending moment, which occurs there:
 
@@ -163,6 +165,8 @@ force and the bending moment that force creates about the corner — that transf
 moment is the load case that actually sizes this plate.
 
 ### Free-body diagram
+
+![Feature 2 free-body diagram](img/fbd-feature2.jpg)
 
 ### Stress analysis, solved symbolically
 
