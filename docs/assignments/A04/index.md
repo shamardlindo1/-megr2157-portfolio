@@ -177,6 +177,13 @@ problem rather than assuming it.
 
 ## Sketch
 
+Hand sketch of the mount in isometric with the dimensions that drive the model. The two
+plate thicknesses, 15 mm and 22 mm, come straight out of the deflection calculations
+above; the 80 mm length, 45 mm width and 60 mm height follow from those two plus the
+40 mm motor stand-off. Hole sizes and spacings are from Appendix A.
+
+![Isometric sketch of the motor mount](img/sketch-isometric.jpg)
+
 ## CAD Model (Parametric)
 
 ### Global variables and equations
