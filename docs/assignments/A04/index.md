@@ -306,12 +306,14 @@ surprised. With PETG at 2,000 MPa the 0.30 mm limit runs out long before 15 MPa 
 both plates ended up around 7 MPa — roughly twice as strong as they need to be. That is
 not waste so much as what a stiffness requirement costs you in a compliant material.
 
-The last one is a modelling habit rather than a design one. My first extrusion silently
-produced nothing — the end condition was set to mid-plane, the model rebuilt without a
-single error, and the tree looked correct. Nothing on screen said anything was wrong. The
-only reason I caught it was checking the mass properties and seeing zero volume. A model
-that rebuilds cleanly is not the same as a model that built what you asked for, and the
-mass properties are the cheapest way to tell the difference.
+The last one is just to check my own work instead of assuming it is right. I made
+mistakes all the way through this assignment — a moment written in N·m when it should
+have been N·mm, an arithmetic slip in one of the required-I numbers, and an extrusion
+that silently built nothing because the end condition was wrong. None of those announced
+themselves. The units error looked fine until I compared it against the stress that came
+out of it, and the empty extrusion only showed up when I pulled the mass properties and
+saw zero volume. Going back over every step and fixing what I found is what turned a
+draft full of small errors into something I would hand in.
 
 ## Time log
 
