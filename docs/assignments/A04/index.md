@@ -87,9 +87,6 @@ opening and the bolt holes, so the beam is analysed as a solid rectangular secti
 
 ### Free-body diagram
 
-*insert your hand-drawn FBD here — cantilever fixed at the left, 300 N down at 40 mm,
-reaction force 300 N up and reaction moment 12,000 N·mm at the fixed end*
-
 Summing forces vertically gives the reaction at the fixed end equal to the applied load.
 Taking moments about the fixed end gives the maximum bending moment, which occurs there:
 
@@ -167,9 +164,6 @@ moment is the load case that actually sizes this plate.
 
 ### Free-body diagram
 
-*insert your hand-drawn FBD here — vertical plate fixed at the wall, 300 N and a
-12,000 N·mm moment applied at the top where Feature 1 joins*
-
 ### Stress analysis, solved symbolically
 
 Both the force and the transferred moment bend the wall plate, and the worst section is
@@ -227,9 +221,6 @@ going to size this plate, but checking it is what tells you that bending is the 
 problem rather than assuming it.
 
 ## Sketch
-
-*insert your hand-drawn isometric sketch of the motor mount here, with the dimensions
-carried over from the two analyses above*
 
 ## CAD Model (Parametric)
 
@@ -308,8 +299,6 @@ available. It cost about 2,000 mm³ of material.
 
 ## Mistakes and changes
 
-*add your own as you go — here is what happened while building it*
-
 The first extrusion silently produced nothing. I had set the end condition to mid-plane,
 which the model rebuilt without complaint but with zero volume, so the feature tree showed
 sketches and no solid. Switching to a two-directional blind extrusion of 22.5 mm each way
@@ -340,8 +329,6 @@ material this compliant, the 0.30 mm limit runs out of room long before the mate
 yields, and sizing on stress alone would have produced a bracket far too floppy to use.
 
 ## Lessons learned
-
-*write your own*
 
 ## Time log
 
