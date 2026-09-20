@@ -319,6 +319,25 @@ two overlaps where D meets C and E gives 3.5578 in³, so the geometry is what I 
 
 ## Multiview Drawings
 
+Two multiview sketches were drawn on paper, both in third angle with the top view above the
+front view and the right side view beside it. The geometry is the same on each sheet; what
+changes is which set of calculated dimensions is called out.
+
+### Stress analysis drawing
+
+The dimensions here are the minimum sizes the stress analysis produced for each feature,
+against the 9,000 psi allowable, before they were rounded up to practical sizes.
+
+![Multiview drawing dimensioned from the stress analysis](img/a5-mv-stress.jpg)
+
+### Stiffness analysis drawing
+
+The dimensions here are the minimum sizes the stiffness analysis produced, against the
+0.005 in deflection limit. Comparing the two sheets side by side is the clearest way to see
+that every stress dimension is the larger one.
+
+![Multiview drawing dimensioned from the stiffness analysis](img/a5-mv-stiffness.jpg)
+
 ## Decide
 
 ### Final stress and stiffness check
@@ -377,6 +396,8 @@ stiffness in at least some features instead of by stress, and the answer to "whi
 controls this design" would flip.
 
 ## Time log
+
+This assignment took me three days from start to finish.
 
 ## Appendix – reference material
 
