@@ -85,7 +85,7 @@ The drawing uses third-angle projection (ANSI standard) on a B-size sheet at 1:1
 - **Right view** — to the right of front, showing width and pin-hole diameter
 - **Isometric view** — upper right corner for 3D context
 
-![A6 Bracket Drawing](A6_drawing.jpg)
+![A6 Bracket Drawing](A6_drawing.png)
 
 ### Tolerance Specification — RC Fits
 
