@@ -112,3 +112,6 @@ Mesh convergence must be checked for each result, not assumed. Displacement conv
 ### CAD Download
 
 - [A7_Bracket.SLDPRT (Design II, final)](../../../cad/A7_Bracket.SLDPRT)
+- [A7_Bracket_DesignI.SLDPRT (Design I, original)](../../../cad/A7_Bracket_DesignI.SLDPRT)
+- [A7_Bracket_DesignII.SLDPRT (Design II)](../../../cad/A7_Bracket_DesignII.SLDPRT)
+- [A7_Bracket_DesignIII.SLDPRT (Design III)](../../../cad/A7_Bracket_DesignIII.SLDPRT)
