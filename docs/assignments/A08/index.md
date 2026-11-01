@@ -61,6 +61,6 @@ Parametric SolidWorks parts using global variables and equations (CD = (PD_p + P
 - Handbook Table 5a and the press-fit and running clearance tables make the bearing choice a pass/fail check.
 - Equation-driven modeling keeps the housing consistent with the gear sizes.
 
-## CAD Files / Handwritten Work
+## CAD Files
 
 - [CAD folder (A8_Gearbox_CAD.zip)](https://github.com/shamardlindo1/-megr2157-portfolio/tree/main/cad)
