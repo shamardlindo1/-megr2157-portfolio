@@ -85,12 +85,7 @@ Design I displacement, 0.07 in mesh (max 0.1159 mm at the free end):
 
 Each design was saved as its own file (A7_Bracket_DesignI / II / III); Design II is the file linked below.
 
-### Mistakes
 
-1. The force box locked at the default value whenever a direction was chosen. Fixed by resetting the direction and re-entering 350 lbf with units set to lbf.
-2. The first Design II run used the original fixture. The fillet shortened the fixed face and created an artificial stress spike (266 MPa). Fixed by adding the fillet face to the fixture.
-3. Design III was assumed to help stress. Thickening made it heavier without lowering stress, which showed the peak was not in the load path.
-4. Element counts for the 0.07 in meshes of Designs II and III were not recorded.
 
 ### Time Log
 
