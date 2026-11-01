@@ -64,4 +64,3 @@ Parametric SolidWorks parts using global variables and equations (CD = (PD_p + P
 ## CAD Files / Handwritten Work
 
 - [CAD folder (A8_Gearbox_CAD.zip)](https://github.com/shamardlindo1/-megr2157-portfolio/tree/main/cad)
-- Handwritten calculations: [insert your scans]
