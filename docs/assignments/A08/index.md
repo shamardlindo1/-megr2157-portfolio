@@ -59,7 +59,7 @@ Parametric SolidWorks parts using global variables and equations (CD = (PD_p + P
 
 ## Mistakes and Time
 
-Mistakes: wrong first assumption of 32 DP (real gears are 48 DP); first cut direction and arguments wrong in the macro; no oil-embedded 1/8 in bearing available. Time: [enter your hours].
+Mistakes: wrong first assumption of 32 DP (real gears are 48 DP); first cut direction and arguments wrong in the macro; no oil-embedded 1/8 in bearing available. 
 
 ## CAD Files / Handwritten Work
 
