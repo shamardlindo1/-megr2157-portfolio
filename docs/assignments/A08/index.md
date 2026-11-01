@@ -57,8 +57,8 @@ Parametric SolidWorks parts using global variables and equations (CD = (PD_p + P
 - Handbook Table 5a and the press-fit and running clearance tables make the bearing choice a pass/fail check.
 - Equation-driven modeling keeps the housing consistent with the gear sizes.
 
-## Mistakes and Time
-
+## Time
+Time spent: I spent a total of 8 hrs on this assignment  
 Mistakes: wrong first assumption of 32 DP (real gears are 48 DP); first cut direction and arguments wrong in the macro; no oil-embedded 1/8 in bearing available. 
 
 ## CAD Files / Handwritten Work
