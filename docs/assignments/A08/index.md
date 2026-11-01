@@ -38,7 +38,11 @@ Material: Handbook Table 5a (oil-impregnated copper-base) allows 500 psi at 50-1
 ## Housing Sketch
 
 
-(Insert hand sketch.) Two halves split at the shaft mid-plane; four corner screws (half A clearance holes, half B tapped); 0.25 in gear cavity per half; bearing bores through the floor.
+![Housing sketch 1](housing_sketch_1.png)
+![Housing sketch 2](housing_sketch_2.png)
+![Housing sketch 3](housing_sketch_3.png)
+
+Two halves split at the shaft mid-plane; four corner screws (half A clearance holes, half B tapped); 0.25 in gear cavity per half; bearing bores through the floor.
 
 ## CAD Design / Assembly
 
@@ -57,10 +61,7 @@ Parametric SolidWorks parts using global variables and equations (CD = (PD_p + P
 - Handbook Table 5a and the press-fit and running clearance tables make the bearing choice a pass/fail check.
 - Equation-driven modeling keeps the housing consistent with the gear sizes.
 
-## Time
-Time spent: I spent a total of 8 hrs on this assignment  
-Mistakes: wrong first assumption of 32 DP (real gears are 48 DP); first cut direction and arguments wrong in the macro; no oil-embedded 1/8 in bearing available. 
-
 ## CAD Files / Handwritten Work
 
 - [CAD folder (A8_Gearbox_CAD.zip)](https://github.com/shamardlindo1/-megr2157-portfolio/tree/main/cad)
+- Handwritten calculations: [insert your scans]
