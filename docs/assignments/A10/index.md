@@ -10,8 +10,6 @@ For my part of the project, I sized the lead screw drivetrain for our 2 kN tensi
 
 <iframe src="A10_Shamar_Leadscrew_Handwritten.pdf" width="100%" height="620px" style="border:1px solid #ccc;"></iframe>
 
-[:material-file-pdf-box: Typed calculations with FBDs (PDF)](A10_Shamar_Lindo_Part1.pdf){ .md-button }
-
 ### Component Selection & Design Notes
 
 - **Dual-screw load split:** I placed two identical screws 150 mm center to center so they split the 2000 N test load evenly, which gives F = 1000 N (224.8 lbf) per screw and keeps the crosshead balanced.
@@ -25,19 +23,11 @@ For my part of the project, I sized the lead screw drivetrain for our 2 kN tensi
 
 **1. Minimum diameter (axial stress):** d<sub>min</sub> = √(4 F SF / (π S<sub>y</sub>)) = √(4·1000·4 / (π·689)) = **2.72 mm** → screw root 10.16 mm, σ = 12.3 MPa, SF = 56.
 
-![Axial FBD](a10_fbd_axial.png)
-
 **2. Rotational speed range:** n = v / L → n<sub>min</sub> = 1/2.54 = **0.39 rpm**, n<sub>max</sub> = 50/2.54 = **19.69 rpm**.
-
-![Speed relation](a10_fbd_speed.png)
 
 **3. Maximum torque per screw:** F<sub>h</sub> = P (μC + L)/(C − μL) = 223.1 N (C = π d<sub>pit</sub> = 35.91 mm), T = F<sub>h</sub> d<sub>pit</sub>/2 = **1.28 N·m** per screw (2.55 N·m total). Efficiency 32%, self-locking.
 
-![Unwrapped helix FBD](a10_fbd_helix.png)
-
 **4. Flange nut thread check:** n<sub>t</sub> = 44.45/2.54 = 17.5 threads, σ<sub>bend</sub> = 6F/(n<sub>t</sub> π d<sub>min</sub> p) = 4.2 MPa (SF = 29), τ<sub>t</sub> = 1.9 MPa (SF = 37), manufacturer rating SF = 1200/224.8 = **5.34 ≥ 4**.
-
-![Nut thread FBD](a10_fbd_nut.png)
 
 ### Handoff Specs for Crosshead & CAD
 
@@ -56,12 +46,8 @@ I treated the crosshead as a simply supported beam on the two nuts (L = 150 mm) 
 
 The stress analysis (M<sub>max</sub> = PL/4 = 75,000 N·mm, SF = 4) only required a bar height of 10.9 mm. However, the 0.1 mm deflection limit needs I ≥ 20,410 mm⁴, a height of at least 16.5 mm, so **stiffness governs** the design. I rounded up to a **55 x 20 mm bar**: σ = 20.5 MPa (SF 13.5) and δ<sub>max</sub> = 0.056 mm (0.066 mm with the Ø8.5 mm grip hole).
 
-![Beam FBD, shear and moment](a10_fbd_beam.png)
-
-![Deflection](a10_fbd_defl.png)
-
 ### Multiview Sketch
 
 Final crosshead: **6061-T6 aluminum bar 55 x 20 x 210 mm**, two Ø26 mm nut-barrel holes 150 mm apart, four #10 clearance holes per flange on a 38.1 mm bolt circle, and a Ø8.5 mm center hole for the grip adapter.
 
-![Crosshead multiview sketch](a10_sketch_crosshead.png)
+![Crosshead multiview sketch (Shamar Lindo)](a10_hw_sketch.jpg)
