@@ -65,3 +65,13 @@ The stress analysis (M<sub>max</sub> = PL/4 = 75,000 N·mm, SF = 4) only require
 Final crosshead: **6061-T6 aluminum bar 55 x 20 x 210 mm**, two Ø26 mm nut-barrel holes 150 mm apart, four #10 clearance holes per flange on a 38.1 mm bolt circle, and a Ø8.5 mm center hole for the grip adapter.
 
 ![Crosshead multiview sketch (Shamar Lindo)](a10_hw_sketch.jpg)
+
+## Bill of Materials & Cost Analysis (Shamar Lindo)
+
+| Item # | Qty | Name | Cost / Item | Total Cost | Purchase Link |
+|:---:|:---:|---|:---:|:---:|---|
+| 1 | 2 | Precision Acme Lead Screw, 4140 Alloy Steel, 1/2"-10 Thread, 18 in. Long | $28.64 | $57.28 | [Link](https://www.mcmaster.com/98940A305/) |
+| 2 | 2 | Precision Acme Flange Nut, 932 Bearing Bronze, 1/2"-10 Thread | $178.60 | $357.20 | [Link](https://www.mcmaster.com/97790A110/) |
+| 3 | 4 | T-Slotted Framing Single Rail, 40 mm x 40 mm, 2 ft. Long | $21.15 | $84.60 | [Link](https://www.mcmaster.com/6575N25-6575N183/) |
+| 4 | 8 | T-Slotted Framing Bracket | $7.06 | $56.48 | [Link](https://www.mcmaster.com/5537T937/) |
+| **Total** |  |  |  | **$555.56** |  |
