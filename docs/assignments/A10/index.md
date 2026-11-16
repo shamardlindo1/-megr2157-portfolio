@@ -10,6 +10,20 @@ For my part of the project, I sized the lead screw drivetrain for our 2 kN tensi
 
 <iframe src="A10_Shamar_Leadscrew_Handwritten.pdf" width="100%" height="620px" style="border:1px solid #ccc;"></iframe>
 
+### Free Body Diagrams
+
+**Speed (nut advancing on the rotating screw)**
+
+![Speed FBD (Shamar Lindo)](a10_hw_speed.jpg)
+
+**Torque (unwrapped thread helix)**
+
+![Helix FBD (Shamar Lindo)](a10_hw_helix.jpg){ width="60%" }
+
+**Nut thread tooth (bending)**
+
+![Nut thread FBD (Shamar Lindo)](a10_hw_nut.jpg)
+
 ### Component Selection & Design Notes
 
 - **Dual-screw load split:** I placed two identical screws 150 mm center to center so they split the 2000 N test load evenly, which gives F = 1000 N (224.8 lbf) per screw and keeps the crosshead balanced.
