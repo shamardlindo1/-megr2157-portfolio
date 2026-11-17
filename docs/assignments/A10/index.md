@@ -62,13 +62,13 @@ The stress analysis (M<sub>max</sub> = PL/4 = 75,000 N·mm, SF = 4) only require
 
 The center hole is **Ø8.5 mm** and holds the specimen grip adapter, where the 2 kN load is applied at midspan.
 
-### Multiview Sketch
+### Multiview Sketch (Addison Fagan)
 
 Final crosshead: **6061-T6 aluminum bar 55 x 20 x 210 mm**, two Ø26 mm nut-barrel holes 150 mm apart, four #10 clearance holes per flange on a 38.1 mm bolt circle, and a Ø8.5 mm center hole for the grip adapter.
 
 ![Crosshead multiview sketch (Shamar Lindo)](a10_hw_sketch.jpg)
 
-## Bill of Materials & Cost Analysis (Shamar Lindo)
+## Bill of Materials & Cost Analysis (Matthew Cowan)
 
 | Item # | Qty | Name | Cost / Item | Total Cost | Purchase Link |
 |:---:|:---:|---|:---:|:---:|---|
@@ -91,6 +91,6 @@ Click [A10 Assembly](https://drive.google.com/file/d/13k7HJP4zf0fmlmFOdKl4SvFfCH
 | Matthew Cowan | Bill of materials and cost analysis, parametric CAD assembly | 4 | 31% |
 | **Total** | | **13** | **100%** |
 
-## Lessons Learned & Project Takeaways
+## Lessons Learned & Project Takeaways (Addison Fagan)
 
 Through this assignment, our group learned the importance of teamwork and effective time management, particularly while balancing part-time jobs to help pay for college. On the technical side, we saw firsthand how critical it is to evaluate both strength and deflection alongside dimensions, material properties, and safety factors when selecting components for a mechanical system. This project also helped give us a clearer understanding of how lead screw diameter, rotational speed, torque, and crosshead geometry directly impact a tensile testing machine's performance and reliability. Addison spent 4 hours on this assignment. Matthew spent 4 hours on this assignment. Shamar spent 5 hours on this assignment, for a total of 13 hours spent on this by the group.
