@@ -78,6 +78,19 @@ Final crosshead: **6061-T6 aluminum bar 55 x 20 x 210 mm**, two Ø26 mm nut-barr
 | 4 | 8 | T-Slotted Framing Bracket | $7.06 | $56.48 | [Link](https://www.mcmaster.com/5537T937/) |
 | **Total** |  |  |  | **$555.56** |  |
 
+## CAD Assembly (Matthew Cowan)
+
+Click [A10 Assembly](https://drive.google.com/file/d/13k7HJP4zf0fmlmFOdKl4SvFfCHS0WzcA/view?usp=sharing) to download the zip file for the CAD Assembly.
+
+## Division of Work
+
+| Team Member | Portion | Hours | Share of Group Time |
+| :-: | :-- | :-: | :-: |
+| Shamar Lindo | Leadscrew diameter, rotational speed and torque, nut and flange selection, crosshead design (beam stress, deflection) | 5 | 38% |
+| Addison Fagan | Multiview sketch, lessons learned | 4 | 31% |
+| Matthew Cowan | Bill of materials and cost analysis, parametric CAD assembly | 4 | 31% |
+| **Total** | | **13** | **100%** |
+
 ## Lessons Learned & Project Takeaways
 
 Through this assignment, our group learned the importance of teamwork and effective time management, particularly while balancing part-time jobs to help pay for college. On the technical side, we saw firsthand how critical it is to evaluate both strength and deflection alongside dimensions, material properties, and safety factors when selecting components for a mechanical system. This project also helped give us a clearer understanding of how lead screw diameter, rotational speed, torque, and crosshead geometry directly impact a tensile testing machine's performance and reliability. Addison spent 4 hours on this assignment. Matthew spent 4 hours on this assignment. Shamar spent 5 hours on this assignment, for a total of 13 hours spent on this by the group.
