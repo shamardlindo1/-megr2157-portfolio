@@ -60,6 +60,8 @@ I treated the crosshead as a simply supported beam on the two nuts (L = 150 mm) 
 
 The stress analysis (M<sub>max</sub> = PL/4 = 75,000 N·mm, SF = 4) only required a bar height of 10.9 mm. However, the 0.1 mm deflection limit needs I ≥ 20,410 mm⁴, a height of at least 16.5 mm, so **stiffness governs** the design. I rounded up to a **55 x 20 mm bar**: σ = 20.5 MPa (SF 13.5) and δ<sub>max</sub> = 0.056 mm (0.066 mm with the Ø8.5 mm grip hole).
 
+The center hole is the mounting point for the specimen grip adapter, where the 2 kN test load is applied at midspan. I checked that it doesn't weaken the bar: with the Ø8.5 mm hole the net width at midspan is 46.5 mm, so I<sub>net</sub> = 31,000 mm⁴, σ = M c / I = 24.2 MPa (SF 11.4), and δ<sub>max</sub> = 0.066 mm, still under the 0.1 mm limit. I also checked a larger Ø13 mm (M12 clearance) hole in case the grip stud needs it: σ = 26.8 MPa (SF 10.3) and δ<sub>max</sub> = 0.073 mm, which still passes.
+
 ### Multiview Sketch
 
 Final crosshead: **6061-T6 aluminum bar 55 x 20 x 210 mm**, two Ø26 mm nut-barrel holes 150 mm apart, four #10 clearance holes per flange on a 38.1 mm bolt circle, and a Ø8.5 mm center hole for the grip adapter.
