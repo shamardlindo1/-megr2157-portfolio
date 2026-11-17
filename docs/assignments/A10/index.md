@@ -75,3 +75,7 @@ Final crosshead: **6061-T6 aluminum bar 55 x 20 x 210 mm**, two Ø26 mm nut-barr
 | 3 | 4 | T-Slotted Framing Single Rail, 40 mm x 40 mm, 2 ft. Long | $21.15 | $84.60 | [Link](https://www.mcmaster.com/6575N25-6575N183/) |
 | 4 | 8 | T-Slotted Framing Bracket | $7.06 | $56.48 | [Link](https://www.mcmaster.com/5537T937/) |
 | **Total** |  |  |  | **$555.56** |  |
+
+## Lessons Learned & Project Takeaways
+
+Through this assignment, our group learned the importance of teamwork and effective time management, particularly while balancing part-time jobs to help pay for college. On the technical side, we saw firsthand how critical it is to evaluate both strength and deflection alongside dimensions, material properties, and safety factors when selecting components for a mechanical system. This project also helped give us a clearer understanding of how lead screw diameter, rotational speed, torque, and crosshead geometry directly impact a tensile testing machine's performance and reliability. Addison spent 4 hours on this assignment. Matthew spent 4 hours on this assignment. Shamar spent 5 hours on this assignment, for a total of 13 hours spent on this by the group.
