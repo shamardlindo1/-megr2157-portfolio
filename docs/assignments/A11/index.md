@@ -32,6 +32,8 @@ For my part of the project, I selected the motor for each lead screw, sized the 
 
 ### Motor Mount Bracket
 
+![Bearing stress free body diagram (Shamar Lindo)](a11_hw_bearing_fbd.png)
+
 ![Motor mount bracket hand calculation (Shamar Lindo)](a11_hw_mount.png)
 
 ### Shaft Coupler
