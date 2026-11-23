@@ -103,11 +103,11 @@ The floating bearing at the bottom of each screw is a 90 x 40 x 20 mm 6061-T6 bl
 | 3 | 4 | T-Slotted Framing Single Rail, 40 mm x 40 mm, 2 ft. Long | $21.15 | $84.60 | [Link](https://www.mcmaster.com/6575N25-6575N183/) |
 | 4 | 8 | T-Slotted Framing Corner Bracket, 40 mm | $7.06 | $56.48 | [Link](https://www.mcmaster.com/5537T937/) |
 | 5 | 2 | Bison DC Gearmotor, 24 V, 20 rpm, 100 in-lb (011-190-4096) | $657.99 | $1,315.98 | [Link](https://www.zoro.com/bison-gear-engineering-dc-gearmotor-20rpm-24v-011-190-4096/i/G9650947) |
-| 6 | 2 | Shaft coupler, 1018 steel, Ø25.4 x 63.5 mm (machined) | stock price to confirm | to confirm | |
+| 6 | 2 | Clamping Precision Flexible Shaft Coupling, Spiral, Aluminum, 2" Long, 1-1/4" OD | $133.16 | $266.32 | [Link](https://www.mcmaster.com/6208K595/) |
 | 7 | 2 | Motor mount plate, 6061-T6, 6.35 mm (machined) | stock price to confirm | to confirm | |
 | 8 | 2 | Floating bearing block, 6061-T6 with bronze sleeve (machined) | stock price to confirm | to confirm | |
 | 9 | 1 | Crosshead, 6061-T6 bar 55 x 20 x 210 mm (machined) | stock price to confirm | to confirm | |
-| **Total of priced parts** | | | | **$1,871.54** | |
+| **Total of priced parts** | | | | **$2,137.86** | |
 
 | Person | A10 Hours | A11 Hours | Total Hours | Cost @ $35/hr |
 |---|:---:|:---:|:---:|:---:|
