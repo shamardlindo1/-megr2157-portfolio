@@ -26,7 +26,7 @@ nav:
       - A8: assignments/A08/index.md
       - A9: assignments/A09/index.md
       - A10: assignments/A10/index.md
-      - A11: assignments/a11/index.md
+      - A11: assignments/A11/index.md
 
 markdown_extensions:
   - toc:
