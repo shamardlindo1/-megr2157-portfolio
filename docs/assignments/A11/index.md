@@ -100,9 +100,10 @@ The floating bearing at the bottom of each screw is a 90 x 40 x 20 mm 6061-T6 bl
 |:---:|:---:|---|:---:|:---:|---|
 | 1 | 2 | Bison DC Gearmotor, 24 V, 20 rpm, 100 in-lb (011-190-4096) | $657.99 | $1,315.98 | [Link](https://www.zoro.com/bison-gear-engineering-dc-gearmotor-20rpm-24v-011-190-4096/i/G9650947) |
 | 2 | 2 | Clamping Precision Flexible Shaft Coupling, Spiral, Aluminum, 2" Long, 1-1/4" OD | $133.16 | $266.32 | [Link](https://www.mcmaster.com/6208K595/) |
-| 3 | 2 | Motor mount plate, 6061-T6, 6.35 mm (machined) | stock price to confirm | to confirm | |
-| 4 | 2 | Floating bearing block, 6061-T6 with bronze sleeve (machined) | stock price to confirm | to confirm | |
-| **Total of priced parts** | | | | **$1,582.30** | |
+| 3 | 1 | 6061-T6 Aluminum Bar, 1/4" x 5" x 1 ft (cut into 2 motor mount plates, machined) | $22.40 | $22.40 | [Link](https://www.mcmaster.com/8975K432/) |
+| 4 | 1 | 6061-T6 Aluminum Bar, 1-1/2" x 1-1/2" x 1 ft (cut into 2 floating bearing blocks, machined) | $34.93 | $34.93 | [Link](https://www.mcmaster.com/9008K46/) |
+| 5 | 1 | Bronze Sleeve Bearing, 1/2" bore, 3/4" long, 3-pack (2 used, for the bearing blocks) | $5.69 | $5.69 | [Link](https://www.zoro.com/bunting-bearings-flanged-sleeve-bearing-bronze-12-in-bore-dia-58-in-od-34-in-l-220-degrees-f-max-temp-3-pk-ef081012/i/G4083974/) |
+| **Total** | | | | **$1,645.32** | |
 
 | Person | A10 Hours | A11 Hours | Total Hours | Cost @ $35/hr |
 |---|:---:|:---:|:---:|:---:|
