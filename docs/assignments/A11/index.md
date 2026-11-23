@@ -45,7 +45,16 @@ For my part of the project, I selected the motor for each lead screw and sized t
 | Component | Part & Material | Key Dimensions | Rating | Notes for Mount / Assembly |
 |---|---|---|---|---|
 | Motors (x2) | Bison 011-190-4096, 24 V DC permanent-magnet gearmotor | Ø1/2 in keyed shaft (1/8 in key), 4 mounting holes Ø0.28 in on a 1.88 in x 3.75 in pattern, 8.41 in long, 3.75 in wide | 100 in-lb (11.30 N·m), 20 rpm, 2.4 A | Use the 1.88 x 3.75 in hole pattern for the bracket; one motor per screw |
-| Couplers (x2) | 1018 steel, hollow shaft | Ø25.4 mm OD, Ø12.7 mm bore both ends, 38.1 mm long | Shear SF 57 at 11.30 N·m | Keyed to the motor shaft, set screws on the screw end |
+| Couplers (x2) | 1018 steel, hollow shaft | Ø25.4 mm OD, Ø12.7 mm bore both ends, 63.5 mm long | Shear SF 57 at 11.30 N·m | Keyed to the motor shaft, set screws on the screw end |
+
+## CAD Assembly & Component Notes (Shamar Lindo)
+
+These are the dimensions I handed off so the motor and coupler can be modeled and mated in the assembly.
+
+- **Motor:** The Bison 011-190-4096 body is 8.41 in long and 3.75 in wide with four Ø0.28 in mounting holes on a 1.88 in x 3.75 in pattern. The output shaft is Ø1/2 in with a 1/8 in square key and a 1 7/16 in output connection depth. If the manufacturer's CAD file is not available, the motor can be modeled as a block envelope with these catalog dimensions.
+- **Coupler:** I did not download this part. It is modeled from my dimensions as a Ø25.4 mm x 63.5 mm cylinder with a Ø12.7 mm bore on each end, a 1/8 in keyway on the motor end, and a set screw on the lead screw end.
+- **Lead screw interface:** The coupler's screw end bore is the same Ø1/2 in as the McMaster 98940A305 Acme screw from A10, so the screw end slides straight into the coupler.
+- **Axial clearance verification:** The assembly layout must leave room between the motor face and the screw end for the 1 7/16 in (36.5 mm) of motor shaft and the 63.5 mm coupler length without the shaft and screw touching, with at least 19 mm of screw engaged in the coupler.
 
 ## Lessons Learned & Project Takeaways (Shamar Lindo)
 
