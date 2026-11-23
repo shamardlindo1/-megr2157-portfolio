@@ -8,7 +8,9 @@ Tensile tester drive: two identical lead screws share a 2 kN test load (1000 N e
 
 For my part of the project, I selected the motor for each lead screw, sized the motor mount bracket for bearing stress, and sized the coupler that joins the motor shaft to the screw. I took the 1.28 N·m peak torque and the 0.39 to 19.69 rpm speed range from my A10 lead screw design, applied the safety factor of 4, and picked a 24 V DC gearmotor with a Ø1/2 in shaft to match the screw. Then I found the minimum bracket thickness and sized the coupler for torsional shear so the team has the exact shaft, bore and mounting dimensions for the mount and frame.
 
-### Motor Selection
+### Speed–Torque Curve
+
+![Speed-torque curve (Shamar Lindo)](a11_speed_torque.png)
 
 ![Motor selection hand calculation (Shamar Lindo)](a11_hw_motor.png)
 
@@ -43,6 +45,7 @@ For my part of the project, I selected the motor for each lead screw, sized the 
 - **Motor mount bracket thickness:** Using a 6061-T6 aluminum plate (S<sub>y</sub> = 276 MPa, SF 4, so 69 MPa allowable) with a 1/4 in (6.35 mm) bolt under a 1000 N reference load, the minimum bearing thickness is 2.28 mm. I selected a 6.35 mm (1/4 in) plate for stiffness against the motor's reaction torque and to keep the motor square to the screw, which gives a bearing safety factor of 11.1. The motor's rated torque only puts 53 N on each of its four bolts.
 - **Coupler sizing:** With a 1018 steel coupler (S<sub>y</sub> = 370 MPa, τ<sub>allow</sub> = 53.4 MPa at SF 4) and a 12.7 mm bore, torsional shear needs only a 12.9 mm outer diameter at 1.28 N·m (14.3 mm at the motor's full rated torque). I selected a 25.4 mm OD so there is a 6.35 mm wall for the keyway and set screws, which gives a shear safety factor of 57 at the motor's rated torque.
 - **Key check:** The 1/8 in square key (19.05 mm long) sees 29.4 MPa at the motor's rated torque, a safety factor of 7.3.
+- **Assumption:** The catalog does not list the motor's no-load speed, so the curve uses 23 rpm as an assumed value. The result does not depend on it, because every point at less than rated torque runs faster than the catalog's 20 rpm.
 
 ### Analytical Calculations
 
