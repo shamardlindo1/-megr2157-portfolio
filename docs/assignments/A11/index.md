@@ -104,20 +104,14 @@ The floating bearing at the bottom of each screw is a 90 x 40 x 20 mm 6061-T6 bl
 | 5 | 1 | Bronze Sleeve Bearing, 1/2" bore, 3/4" long, 3-pack (2 used, for the bearing blocks) | $5.69 | $5.69 | [Link](https://www.zoro.com/bunting-bearings-flanged-sleeve-bearing-bronze-12-in-bore-dia-58-in-od-34-in-l-220-degrees-f-max-temp-3-pk-ef081012/i/G4083974/) |
 | **Total** | | | | **$1,388.77** | |
 
-| Person | A10 Hours | A11 Hours | Total Hours | Cost @ $35/hr |
-|---|:---:|:---:|:---:|:---:|
-| Shamar Lindo | 5 | to fill in | | to fill in |
-| Addison Fagan | 4 | to fill in | | to fill in |
-| Matthew Cowan | 4 | to fill in | | to fill in |
 
 ## Division of Work
 
-| Team Member | Portion | Hours | Share of Group Time |
-| :-: | :-- | :-: | :-: |
-| Shamar Lindo | Motor selection and speed-torque curve, motor mount bracket (bearing stress), shaft coupler (torsion), frame connectors, top rail and vertical column hand analysis, floating bearing mount (RC3 fit), bill of materials and cost | to fill in | to fill in |
-| Addison Fagan | CAD models of the motor mount, coupler and floating bearing block, solid-mesh FEA of the top of the frame | to fill in | to fill in |
-| Matthew Cowan | CAD assembly and download link, solid-mesh FEA of the vertical frame, drawing package | to fill in | to fill in |
-| **Total** | | **to fill in** | **100%** |
+| Team Member | Portion |
+| :-: | :-- |
+| Shamar Lindo | Motor selection and speed-torque curve, motor mount bracket (bearing stress), shaft coupler (torsion), frame connectors, top rail and vertical column hand analysis, floating bearing mount (RC3 fit), bill of materials and cost |
+| Addison Fagan | CAD models of the motor mount, coupler and floating bearing block, solid-mesh FEA of the top of the frame |
+| Matthew Cowan | CAD assembly and download link, solid-mesh FEA of the vertical frame, drawing package |
 
 ## Lessons Learned & Project Takeaways (Shamar Lindo)
 
