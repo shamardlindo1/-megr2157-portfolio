@@ -14,13 +14,19 @@ For my part of the project, I selected the motor for each lead screw, sized the 
 
 ![Speed-torque curve (Shamar Lindo)](a11_speed_torque.png)
 
+![Motor selection hand calculation (Shamar Lindo)](a11_hw_motor.png)
+
 ### Bearing Stress Free Body Diagram
 
 ![Bearing stress FBD (Shamar Lindo)](a11_bearing_fbd.png)
 
+![Motor mount bracket hand calculation (Shamar Lindo)](a11_hw_mount.png)
+
 ### Coupler Free Body Diagram
 
 ![Coupler FBD (Shamar Lindo)](a11_coupler_fbd.png)
+
+![Coupler hand calculation (Shamar Lindo)](a11_hw_coupler.png)
 
 ### Component Selection & Design Notes
 
