@@ -98,16 +98,11 @@ The floating bearing at the bottom of each screw is a 90 x 40 x 20 mm 6061-T6 bl
 
 | Item # | Qty | Name | Cost / Item | Total Cost | Purchase Link |
 |:---:|:---:|---|:---:|:---:|---|
-| 1 | 2 | Precision Acme Lead Screw, 4140 Alloy Steel, 1/2"-10 Thread, 18 in. Long | $28.64 | $57.28 | [Link](https://www.mcmaster.com/98940A305/) |
-| 2 | 2 | Precision Acme Flange Nut, 932 Bearing Bronze, 1/2"-10 Thread | $178.60 | $357.20 | [Link](https://www.mcmaster.com/97790A110/) |
-| 3 | 4 | T-Slotted Framing Single Rail, 40 mm x 40 mm, 2 ft. Long | $21.15 | $84.60 | [Link](https://www.mcmaster.com/6575N25-6575N183/) |
-| 4 | 8 | T-Slotted Framing Corner Bracket, 40 mm | $7.06 | $56.48 | [Link](https://www.mcmaster.com/5537T937/) |
-| 5 | 2 | Bison DC Gearmotor, 24 V, 20 rpm, 100 in-lb (011-190-4096) | $657.99 | $1,315.98 | [Link](https://www.zoro.com/bison-gear-engineering-dc-gearmotor-20rpm-24v-011-190-4096/i/G9650947) |
-| 6 | 2 | Clamping Precision Flexible Shaft Coupling, Spiral, Aluminum, 2" Long, 1-1/4" OD | $133.16 | $266.32 | [Link](https://www.mcmaster.com/6208K595/) |
-| 7 | 2 | Motor mount plate, 6061-T6, 6.35 mm (machined) | stock price to confirm | to confirm | |
-| 8 | 2 | Floating bearing block, 6061-T6 with bronze sleeve (machined) | stock price to confirm | to confirm | |
-| 9 | 1 | Crosshead, 6061-T6 bar 55 x 20 x 210 mm (machined) | stock price to confirm | to confirm | |
-| **Total of priced parts** | | | | **$2,137.86** | |
+| 1 | 2 | Bison DC Gearmotor, 24 V, 20 rpm, 100 in-lb (011-190-4096) | $657.99 | $1,315.98 | [Link](https://www.zoro.com/bison-gear-engineering-dc-gearmotor-20rpm-24v-011-190-4096/i/G9650947) |
+| 2 | 2 | Clamping Precision Flexible Shaft Coupling, Spiral, Aluminum, 2" Long, 1-1/4" OD | $133.16 | $266.32 | [Link](https://www.mcmaster.com/6208K595/) |
+| 3 | 2 | Motor mount plate, 6061-T6, 6.35 mm (machined) | stock price to confirm | to confirm | |
+| 4 | 2 | Floating bearing block, 6061-T6 with bronze sleeve (machined) | stock price to confirm | to confirm | |
+| **Total of priced parts** | | | | **$1,582.30** | |
 
 | Person | A10 Hours | A11 Hours | Total Hours | Cost @ $35/hr |
 |---|:---:|:---:|:---:|:---:|
