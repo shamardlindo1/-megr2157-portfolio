@@ -8,8 +8,6 @@ Tensile tester drive: two identical lead screws share a 2 kN test load (1000 N e
 
 For my part of the project, I selected the motor for each lead screw, sized the motor mount bracket for bearing stress, and sized the coupler that joins the motor shaft to the screw. I took the 1.28 N·m peak torque and the 0.39 to 19.69 rpm speed range from my A10 lead screw design, applied the safety factor of 4, and picked a 24 V DC gearmotor with a Ø1/2 in shaft to match the screw. Then I found the minimum bracket thickness and sized the coupler for torsional shear so the team has the exact shaft, bore and mounting dimensions for the mount, frame and CAD assembly. I also did the frame, bearing mount and cost calculations, and left the CAD modeling to the teammates.
 
-<iframe src="A11_Shamar_Lindo_Motor_Coupler.pdf" width="100%" height="620px" style="border:1px solid #ccc;"></iframe>
-
 ### Speed–Torque Curve
 
 ![Speed-torque curve (Shamar Lindo)](a11_speed_torque.png)
@@ -32,15 +30,11 @@ For my part of the project, I selected the motor for each lead screw, sized the 
 
 **Verification:** The motor's 11.30 N·m rating is 8.83 times the 1.28 N·m working torque and above the 5.12 N·m design torque, so it passes with the safety factor of 4 applied. The catalog gives 20 rpm at 24 V at the rated torque, and a DC motor runs faster at lighter loads, so at 1.28 N·m it is above the 19.69 rpm needed. Speed is lowered by reducing the supply voltage. The working-load current is about 2.4 A × (1.28 / 11.30) = 0.27 A, and the Ø1/2 in shaft matches the Ø1/2 in lead screw.
 
-### Bearing Stress Free Body Diagram
-
-![Bearing stress FBD (Shamar Lindo)](a11_bearing_fbd.png)
+### Motor Mount Bracket
 
 ![Motor mount bracket hand calculation (Shamar Lindo)](a11_hw_mount.png)
 
-### Coupler Free Body Diagram
-
-![Coupler FBD (Shamar Lindo)](a11_coupler_fbd.png)
+### Shaft Coupler
 
 ![Coupler hand calculation (Shamar Lindo)](a11_hw_coupler.png)
 
@@ -80,14 +74,6 @@ For my part of the project, I selected the motor for each lead screw, sized the 
 ## Frame Connectors, Top-of-Frame & Vertical Frame Analysis (Shamar Lindo)
 
 I checked the frame with hand calculations and a beam-element FEA. The frame is four 2 ft McMaster 6575N25 40 mm rails (two columns, a top rail and a bottom rail) joined at the four corners with eight McMaster 5537T937 corner brackets (6063-T5 aluminum, two M8 screws each). McMaster does not publish section properties for the rail, so I used the published values for the equivalent 40 mm 40 Series profile (I = 137,870 mm⁴, A = 874.2 mm², S<sub>y</sub> = 172.4 MPa, E = 68.9 GPa). They should be replaced with the mass-properties values from the CAD model.
-
-### Top Rail Free Body, Shear and Moment
-
-![Top rail FBD (Shamar Lindo)](a11_toprail.png)
-
-### Vertical Column Free Body
-
-![Column FBD (Shamar Lindo)](a11_column.png)
 
 ### Frame Analysis Notes
 
