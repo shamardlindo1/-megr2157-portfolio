@@ -16,6 +16,22 @@ For my part of the project, I selected the motor for each lead screw, sized the 
 
 ![Motor selection hand calculation (Shamar Lindo)](a11_hw_motor.png)
 
+**Selected motor: Bison Gear & Engineering permanent-magnet DC gearmotor, Mfr # 011-190-4096** ([Zoro # G9650947](https://www.zoro.com/bison-gear-engineering-dc-gearmotor-20rpm-24v-011-190-4096/i/G9650947))
+
+| Parameter | Value |
+|---|---|
+| Type / duty | Permanent magnet DC gearmotor, continuous duty, IP43 |
+| Supply voltage | 24 V DC |
+| Output speed | 20 rpm at 24 V (gear ratio 95.5:1) |
+| Rated (maximum) torque | 100 in-lb = 11.30 N·m |
+| Full load current | 2.4 A (57.6 W input) |
+| Efficiency at rated load | 23.7 W output / 57.6 W input = 41% |
+| Output shaft | Ø1/2 in, keyed, 1/8 in square key, keyway 3/4 in long |
+| Mounting interface | 4 holes Ø0.28 in on a 1.88 in x 3.75 in pattern (47.8 x 95.3 mm) |
+| Cost | $657.99 each, 2 required = $1,315.98 |
+
+**Verification:** The motor's 11.30 N·m rating is 8.83 times the 1.28 N·m working torque and above the 5.12 N·m design torque, so it passes with the safety factor of 4 applied. The catalog gives 20 rpm at 24 V at the rated torque, and a DC motor runs faster at lighter loads, so at 1.28 N·m it is above the 19.69 rpm needed. Speed is lowered by reducing the supply voltage. The working-load current is about 2.4 A × (1.28 / 11.30) = 0.27 A, and the Ø1/2 in shaft matches the Ø1/2 in lead screw.
+
 ### Bearing Stress Free Body Diagram
 
 ![Bearing stress FBD (Shamar Lindo)](a11_bearing_fbd.png)
