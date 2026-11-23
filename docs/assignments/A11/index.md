@@ -6,7 +6,7 @@ Tensile tester drive: two identical lead screws share a 2 kN test load (1000 N e
 
 ## Motor Selection & Shaft Coupler (Shamar Lindo)
 
-For my part of the project, I selected the motor for each lead screw, sized the motor mount bracket for bearing stress, and sized the coupler that joins the motor shaft to the screw. I took the 1.28 N·m peak torque and the 0.39 to 19.69 rpm speed range from my A10 lead screw design, applied the safety factor of 4, and picked a 24 V DC gearmotor with a Ø1/2 in shaft to match the screw. Then I found the minimum bracket thickness and sized the coupler for torsional shear so the team has the exact shaft, bore and mounting dimensions for the mount, frame and CAD assembly.
+For my part of the project, I selected the motor for each lead screw, sized the motor mount bracket for bearing stress, and sized the coupler that joins the motor shaft to the screw. I took the 1.28 N·m peak torque and the 0.39 to 19.69 rpm speed range from my A10 lead screw design, applied the safety factor of 4, and picked a 24 V DC gearmotor with a Ø1/2 in shaft to match the screw. Then I found the minimum bracket thickness and sized the coupler for torsional shear so the team has the exact shaft, bore and mounting dimensions for the mount, frame and CAD assembly. I also did the frame, bearing mount and cost calculations, and left the CAD modeling to the teammates.
 
 <iframe src="A11_Shamar_Lindo_Motor_Coupler.pdf" width="100%" height="620px" style="border:1px solid #ccc;"></iframe>
 
@@ -54,6 +54,58 @@ For my part of the project, I selected the motor for each lead screw, sized the 
 | Motors (x2) | Bison 011-190-4096, 24 V DC permanent-magnet gearmotor | Ø1/2 in keyed shaft (1/8 in key), 4 mounting holes Ø0.28 in on a 1.88 in x 3.75 in pattern, 8.41 in long, 3.75 in wide | 100 in-lb (11.30 N·m), 20 rpm, 2.4 A | Use the 1.88 x 3.75 in hole pattern for the bracket; one motor per screw |
 | Motor Mount Bracket (x2) | 6061-T6 aluminum plate | 6.35 mm (1/4 in) thick (exceeds the 2.28 mm bearing minimum), four Ø0.28 in holes on the motor's 1.88 in x 3.75 in pattern, clear center hole for the shaft | σ<sub>allow</sub> = 69 MPa (SF 4) | Four-hole pattern to the frame and CAD model still to be added by the teammate doing the frame |
 | Couplers (x2) | 1018 steel, hollow shaft | Ø25.4 mm OD, Ø12.7 mm bore both ends, 63.5 mm long | Shear SF 57 at 11.30 N·m | Keyed to the motor shaft, set screws on the screw end |
+
+## Frame Connectors, Top-of-Frame & Vertical Frame Analysis (Shamar Lindo)
+
+I checked the frame with hand calculations and a beam-element FEA. The frame is four 2 ft McMaster 6575N25 40 mm rails (two columns, a top rail and a bottom rail) joined at the four corners with eight McMaster 5537T937 corner brackets (6063-T5 aluminum, two M8 screws each). McMaster does not publish section properties for the rail, so I used the published values for the equivalent 40 mm 40 Series profile (I = 137,870 mm⁴, A = 874.2 mm², S<sub>y</sub> = 172.4 MPa, E = 68.9 GPa). They should be replaced with the mass-properties values from the CAD model.
+
+### Top Rail Free Body, Shear and Moment
+
+![Top rail FBD (Shamar Lindo)](a11_toprail.png)
+
+### Vertical Column Free Body
+
+![Column FBD (Shamar Lindo)](a11_column.png)
+
+### Frame Analysis Notes
+
+- **Connectors:** Each corner carries a 1000 N reaction on four M8 screws (two brackets), so each screw sees 250 N and 6.8 MPa of shear. Assuming a low-grade screw (S<sub>y</sub> = 240 MPa) the safety factor is 20. The motors' reaction torques only add 4.5 N at the rail ends, so twist is negligible. McMaster does not publish a pullout rating for the drop-in nuts, so the screw shear check is the limit I could verify.
+- **Top rail:** Simply supported over 569.6 mm with two 1000 N loads 150 mm apart, M<sub>max</sub> = 209,800 N·mm, σ = 30.4 MPa (SF 5.7) and a midspan deflection of 0.733 mm (L/777). The beam-element model gives the same values at 8, 16, 32 and 64 elements.
+- **Vertical columns:** Each column carries 1000 N axial plus an assumed 50 N side load (5% of the axial load) at the top, fixed at the base. The combined stress is 5.56 MPa (SF 31), the top deflection is 0.397 mm and Euler buckling gives a safety factor of 63.
+- **Load path and optimization:** The 1000 N screw loads go through the motor plate into the top rail, then through the corner brackets into the columns and down to the base. Both members have a large margin, so strength does not need stiffening. A second top rail would halve the rail deflection if that is wanted.
+- **Left for the CAD teammates:** the 3D model of the frame, and the solid-mesh FEA run with local refinement at the bracket holes.
+
+## Floating Bearing Mount (Shamar Lindo)
+
+![RC3 fit (Shamar Lindo)](a11_fit.png)
+
+The floating bearing at the bottom of each screw is a 90 x 40 x 20 mm 6061-T6 block with an oil-impregnated bronze sleeve, bolted to the bottom rail with two M8 bolts through Ø9.0 mm holes 60 mm apart.
+
+- **RC3 fit:** The bore is Ø12.700 mm (0.5000 in) with +0.018 / −0 mm. The screw end is turned to a journal of Ø12.675 to 12.685 mm (0.4990 to 0.4994 in), which gives 0.015 to 0.043 mm of clearance.
+- **Bore length:** 20 mm (L/d = 1.6). Radial bearing pressure from a 50 N side load is only 0.20 MPa.
+- **Axial float:** At least 2 mm of gap at the screw tip, since the screw grows 0.107 mm for a 20 K rise.
+- **Bolt holes:** Ø9.0 mm is the normal clearance for M8 (ISO 273: 8.4 close, 9.0 normal, 10.0 loose). The 15 mm edge distance is 1.7 hole diameters, and each bolt sees only about 25 N.
+
+## Bill of Materials & Design Cost (Shamar Lindo)
+
+| Item # | Qty | Name | Cost / Item | Total Cost | Purchase Link |
+|:---:|:---:|---|:---:|:---:|---|
+| 1 | 2 | Precision Acme Lead Screw, 4140 Alloy Steel, 1/2"-10 Thread, 18 in. Long | $28.64 | $57.28 | [Link](https://www.mcmaster.com/98940A305/) |
+| 2 | 2 | Precision Acme Flange Nut, 932 Bearing Bronze, 1/2"-10 Thread | $178.60 | $357.20 | [Link](https://www.mcmaster.com/97790A110/) |
+| 3 | 4 | T-Slotted Framing Single Rail, 40 mm x 40 mm, 2 ft. Long | $21.15 | $84.60 | [Link](https://www.mcmaster.com/6575N25-6575N183/) |
+| 4 | 8 | T-Slotted Framing Corner Bracket, 40 mm | $7.06 | $56.48 | [Link](https://www.mcmaster.com/5537T937/) |
+| 5 | 2 | Bison DC Gearmotor, 24 V, 20 rpm, 100 in-lb (011-190-4096) | $657.99 | $1,315.98 | [Link](https://www.zoro.com/bison-gear-engineering-dc-gearmotor-20rpm-24v-011-190-4096/i/G9650947) |
+| 6 | 2 | Shaft coupler, 1018 steel, Ø25.4 x 63.5 mm (machined) | stock price to confirm | to confirm | |
+| 7 | 2 | Motor mount plate, 6061-T6, 6.35 mm (machined) | stock price to confirm | to confirm | |
+| 8 | 2 | Floating bearing block, 6061-T6 with bronze sleeve (machined) | stock price to confirm | to confirm | |
+| 9 | 1 | Crosshead, 6061-T6 bar 55 x 20 x 210 mm (machined) | stock price to confirm | to confirm | |
+| **Total of priced parts** | | | | **$1,871.54** | |
+
+| Person | A10 Hours | A11 Hours | Total Hours | Cost @ $35/hr |
+|---|:---:|:---:|:---:|:---:|
+| Shamar Lindo | 5 | to fill in | | to fill in |
+| Addison Fagan | 4 | to fill in | | to fill in |
+| Matthew Cowan | 4 | to fill in | | to fill in |
 
 ## CAD Assembly & Component Notes (Shamar Lindo)
 
