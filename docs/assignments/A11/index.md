@@ -6,7 +6,7 @@ Tensile tester drive: two identical lead screws share a 2 kN test load (1000 N e
 
 ## Motor Selection & Shaft Coupler (Shamar Lindo)
 
-For my part of the project, I selected the motor for each lead screw, sized the motor mount bracket for bearing stress, and sized the coupler that joins the motor shaft to the screw. I took the 1.28 N·m peak torque and the 0.39 to 19.69 rpm speed range from my A10 lead screw design, applied the safety factor of 4, and picked a 24 V DC gearmotor with a Ø1/2 in shaft to match the screw. Then I found the minimum bracket thickness and sized the coupler for torsional shear so the team has the exact shaft, bore and mounting dimensions for the mount, frame and CAD assembly.
+For my part of the project, I selected the motor for each lead screw, sized the motor mount bracket for bearing stress, and sized the coupler that joins the motor shaft to the screw. I took the 1.28 N·m peak torque and the 0.39 to 19.69 rpm speed range from my A10 lead screw design, applied the safety factor of 4, and picked a 24 V DC gearmotor with a Ø1/2 in shaft to match the screw. Then I found the minimum bracket thickness and sized the coupler for torsional shear so the team has the exact shaft, bore and mounting dimensions for the mount and frame.
 
 ### Speed–Torque Curve
 
@@ -63,17 +63,17 @@ For my part of the project, I selected the motor for each lead screw, sized the 
 
 **6. Selected coupler:** d<sub>o</sub> = 25.4 mm, J = 38,309 mm⁴, τ = **0.42 MPa** at 1.28 N·m (SF 503) and **3.75 MPa** at 11.30 N·m (SF 57).
 
-### Handoff Specs for Mount, Frame & CAD
+### Handoff Specs for Mount & Frame
 
 | Component | Part & Material | Key Dimensions | Rating | Notes for Mount / Assembly |
 |---|---|---|---|---|
 | Motors (x2) | Bison 011-190-4096, 24 V DC permanent-magnet gearmotor | Ø1/2 in keyed shaft (1/8 in key), 4 mounting holes Ø0.28 in on a 1.88 in x 3.75 in pattern, 8.41 in long, 3.75 in wide | 100 in-lb (11.30 N·m), 20 rpm, 2.4 A | Use the 1.88 x 3.75 in hole pattern for the bracket; one motor per screw |
-| Motor Mount Bracket (x2) | 6061-T6 aluminum plate | 6.35 mm (1/4 in) thick (exceeds the 2.28 mm bearing minimum), four Ø0.28 in holes on the motor's 1.88 in x 3.75 in pattern, clear center hole for the shaft | σ<sub>allow</sub> = 69 MPa (SF 4) | Four-hole pattern to the frame and CAD model still to be added by the teammate doing the frame |
+| Motor Mount Bracket (x2) | 6061-T6 aluminum plate | 6.35 mm (1/4 in) thick (exceeds the 2.28 mm bearing minimum), four Ø0.28 in holes on the motor's 1.88 in x 3.75 in pattern, clear center hole for the shaft | σ<sub>allow</sub> = 69 MPa (SF 4) | Four-hole pattern to the frame |
 | Couplers (x2) | 1018 steel, hollow shaft | Ø25.4 mm OD, Ø12.7 mm bore both ends, 63.5 mm long | Shear SF 57 at 11.30 N·m | Keyed to the motor shaft, set screws on the screw end |
 
 ## Frame Connectors, Top-of-Frame & Vertical Frame Analysis (Shamar Lindo)
 
-I checked the frame with hand calculations and a beam-element FEA. The frame is four 2 ft McMaster 6575N25 40 mm rails (two columns, a top rail and a bottom rail) joined at the four corners with eight McMaster 5537T937 corner brackets (6063-T5 aluminum, two M8 screws each). McMaster does not publish section properties for the rail, so I used the published values for the equivalent 40 mm 40 Series profile (I = 137,870 mm⁴, A = 874.2 mm², S<sub>y</sub> = 172.4 MPa, E = 68.9 GPa). They should be replaced with the mass-properties values from the CAD model.
+I checked the frame with hand calculations and a beam-element FEA. The frame is four 2 ft McMaster 6575N25 40 mm rails (two columns, a top rail and a bottom rail) joined at the four corners with eight McMaster 5537T937 corner brackets (6063-T5 aluminum, two M8 screws each). McMaster does not publish section properties for the rail, so I used the published values for the equivalent 40 mm 40 Series profile (I = 137,870 mm⁴, A = 874.2 mm², S<sub>y</sub> = 172.4 MPa, E = 68.9 GPa). They can be replaced with the actual section properties once the frame is modeled.
 
 ### Frame Analysis Notes
 
@@ -81,7 +81,6 @@ I checked the frame with hand calculations and a beam-element FEA. The frame is 
 - **Top rail:** Simply supported over 569.6 mm with two 1000 N loads 150 mm apart, M<sub>max</sub> = 209,800 N·mm, σ = 30.4 MPa (SF 5.7) and a midspan deflection of 0.733 mm (L/777). The beam-element model gives the same values at 8, 16, 32 and 64 elements.
 - **Vertical columns:** Each column carries 1000 N axial plus an assumed 50 N side load (5% of the axial load) at the top, fixed at the base. The combined stress is 5.56 MPa (SF 31), the top deflection is 0.397 mm and Euler buckling gives a safety factor of 63.
 - **Load path and optimization:** The 1000 N screw loads go through the motor plate into the top rail, then through the corner brackets into the columns and down to the base. Both members have a large margin, so strength does not need stiffening. A second top rail would halve the rail deflection if that is wanted.
-- **Left for the CAD teammates:** the 3D model of the frame, and the solid-mesh FEA run with local refinement at the bracket holes.
 
 ## Floating Bearing Mount (Shamar Lindo)
 
@@ -111,15 +110,6 @@ The floating bearing at the bottom of each screw is a 90 x 40 x 20 mm 6061-T6 bl
 | Addison Fagan | 4 | to fill in | | to fill in |
 | Matthew Cowan | 4 | to fill in | | to fill in |
 
-## CAD Assembly & Component Notes (Shamar Lindo)
-
-These are the dimensions I handed off so the motor and coupler can be modeled and mated in the assembly.
-
-- **Motor:** The Bison 011-190-4096 body is 8.41 in long and 3.75 in wide with four Ø0.28 in mounting holes on a 1.88 in x 3.75 in pattern. The output shaft is Ø1/2 in with a 1/8 in square key and a 1 7/16 in output connection depth. If the manufacturer's CAD file is not available, the motor can be modeled as a block envelope with these catalog dimensions.
-- **Coupler:** I did not download this part. It is modeled from my dimensions as a Ø25.4 mm x 63.5 mm cylinder with a Ø12.7 mm bore on each end, a 1/8 in keyway on the motor end, and a set screw on the lead screw end.
-- **Lead screw interface:** The coupler's screw end bore is the same Ø1/2 in as the McMaster 98940A305 Acme screw from A10, so the screw end slides straight into the coupler.
-- **Axial clearance verification:** The assembly layout must leave room between the motor face and the screw end for the 1 7/16 in (36.5 mm) of motor shaft and the 63.5 mm coupler length without the shaft and screw touching, with at least 19 mm of screw engaged in the coupler.
-
 ## Division of Work
 
 | Team Member | Portion | Hours | Share of Group Time |
@@ -128,10 +118,6 @@ These are the dimensions I handed off so the motor and coupler can be modeled an
 | Addison Fagan | CAD models of the motor mount, coupler and floating bearing block, solid-mesh FEA of the top of the frame | to fill in | to fill in |
 | Matthew Cowan | CAD assembly and download link, solid-mesh FEA of the vertical frame, drawing package | to fill in | to fill in |
 | **Total** | | **to fill in** | **100%** |
-
-## CAD Modeling & FEA (Addison Fagan, Matthew Cowan)
-
-CAD download link: to be added by the teammates who modeled the parts and the assembly.
 
 ## Lessons Learned & Project Takeaways (Shamar Lindo)
 
