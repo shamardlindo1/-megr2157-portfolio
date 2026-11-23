@@ -8,7 +8,9 @@ Tensile tester drive: two identical lead screws share a 2 kN test load (1000 N e
 
 For my part of the project, I selected the motor for each lead screw, sized the motor mount bracket for bearing stress, and sized the coupler that joins the motor shaft to the screw. I took the 1.28 N·m peak torque and the 0.39 to 19.69 rpm speed range from my A10 lead screw design, applied the safety factor of 4, and picked a 24 V DC gearmotor with a Ø1/2 in shaft to match the screw. Then I found the minimum bracket thickness and sized the coupler for torsional shear so the team has the exact shaft, bore and mounting dimensions for the mount, frame and CAD assembly.
 
-### Motor Selection
+### Speed–Torque Curve
+
+![Speed-torque curve (Shamar Lindo)](a11_speed_torque.png)
 
 ![Motor selection hand calculation (Shamar Lindo)](a11_hw_motor.png)
 
@@ -43,6 +45,7 @@ For my part of the project, I selected the motor for each lead screw, sized the 
 - **Motor mount bracket thickness:** Using a 6061-T6 aluminum plate (S<sub>y</sub> = 276 MPa, SF 4, so 69 MPa allowable) with a 1/4 in (6.35 mm) bolt under a 1000 N reference load, the minimum bearing thickness is 2.28 mm. I selected a 6.35 mm (1/4 in) plate for stiffness against the motor's reaction torque and to keep the motor square to the screw, which gives a bearing safety factor of 11.1. The motor's rated torque only puts 53 N on each of its four bolts.
 - **Coupler sizing:** With a 1018 steel coupler (S<sub>y</sub> = 370 MPa, τ<sub>allow</sub> = 53.4 MPa at SF 4) and a 12.7 mm bore, torsional shear needs only a 12.9 mm outer diameter at 1.28 N·m (14.3 mm at the motor's full rated torque). I selected a 25.4 mm OD so there is a 6.35 mm wall for the keyway and set screws, which gives a shear safety factor of 57 at the motor's rated torque.
 - **Key check:** The 1/8 in square key (19.05 mm long) sees 29.4 MPa at the motor's rated torque, a safety factor of 7.3.
+- **Assumption:** The catalog does not list the motor's no-load speed, so the curve uses 23 rpm as an assumed value. The result does not depend on it, because every point at less than rated torque runs faster than the catalog's 20 rpm.
 
 ### Analytical Calculations
 
@@ -96,11 +99,11 @@ The floating bearing at the bottom of each screw is a 90 x 40 x 20 mm 6061-T6 bl
 | Item # | Qty | Name | Cost / Item | Total Cost | Purchase Link |
 |:---:|:---:|---|:---:|:---:|---|
 | 1 | 2 | Bison DC Gearmotor, 24 V, 20 rpm, 100 in-lb (011-190-4096) | $657.99 | $1,315.98 | [Link](https://www.zoro.com/bison-gear-engineering-dc-gearmotor-20rpm-24v-011-190-4096/i/G9650947) |
-| 2 | 2 | Clamping Precision Flexible Shaft Coupling, Spiral, Aluminum, 2" Long, 1-1/4" OD | $133.16 | $266.32 | [Link](https://www.mcmaster.com/6208K595/) |
+| 2 | 1 | 1018 Low-Carbon Steel Rod, 1" diameter, 1 ft (cut into 2 shaft couplers, machined) | $9.77 | $9.77 | [Link](https://www.mcmaster.com/8920K231/) |
 | 3 | 1 | 6061-T6 Aluminum Bar, 1/4" x 5" x 1 ft (cut into 2 motor mount plates, machined) | $22.40 | $22.40 | [Link](https://www.mcmaster.com/8975K432/) |
 | 4 | 1 | 6061-T6 Aluminum Bar, 1-1/2" x 1-1/2" x 1 ft (cut into 2 floating bearing blocks, machined) | $34.93 | $34.93 | [Link](https://www.mcmaster.com/9008K46/) |
 | 5 | 1 | Bronze Sleeve Bearing, 1/2" bore, 3/4" long, 3-pack (2 used, for the bearing blocks) | $5.69 | $5.69 | [Link](https://www.zoro.com/bunting-bearings-flanged-sleeve-bearing-bronze-12-in-bore-dia-58-in-od-34-in-l-220-degrees-f-max-temp-3-pk-ef081012/i/G4083974/) |
-| **Total** | | | | **$1,645.32** | |
+| **Total** | | | | **$1,388.77** | |
 
 | Person | A10 Hours | A11 Hours | Total Hours | Cost @ $35/hr |
 |---|:---:|:---:|:---:|:---:|
@@ -116,6 +119,19 @@ These are the dimensions I handed off so the motor and coupler can be modeled an
 - **Coupler:** I did not download this part. It is modeled from my dimensions as a Ø25.4 mm x 63.5 mm cylinder with a Ø12.7 mm bore on each end, a 1/8 in keyway on the motor end, and a set screw on the lead screw end.
 - **Lead screw interface:** The coupler's screw end bore is the same Ø1/2 in as the McMaster 98940A305 Acme screw from A10, so the screw end slides straight into the coupler.
 - **Axial clearance verification:** The assembly layout must leave room between the motor face and the screw end for the 1 7/16 in (36.5 mm) of motor shaft and the 63.5 mm coupler length without the shaft and screw touching, with at least 19 mm of screw engaged in the coupler.
+
+## Division of Work
+
+| Team Member | Portion | Hours | Share of Group Time |
+| :-: | :-- | :-: | :-: |
+| Shamar Lindo | Motor selection and speed-torque curve, motor mount bracket (bearing stress), shaft coupler (torsion), frame connectors, top rail and vertical column hand analysis, floating bearing mount (RC3 fit), bill of materials and cost | to fill in | to fill in |
+| Addison Fagan | CAD models of the motor mount, coupler and floating bearing block, solid-mesh FEA of the top of the frame | to fill in | to fill in |
+| Matthew Cowan | CAD assembly and download link, solid-mesh FEA of the vertical frame, drawing package | to fill in | to fill in |
+| **Total** | | **to fill in** | **100%** |
+
+## CAD Modeling & FEA (Addison Fagan, Matthew Cowan)
+
+CAD download link: to be added by the teammates who modeled the parts and the assembly.
 
 ## Lessons Learned & Project Takeaways (Shamar Lindo)
 
