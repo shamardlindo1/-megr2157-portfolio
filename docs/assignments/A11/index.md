@@ -4,6 +4,26 @@
 
 Tensile tester drive: two identical lead screws share a 2 kN test load (1000 N each), speed range 1 to 50 mm/min, 18 in minimum screw length, safety factor 4. Each screw needs 1.28 N·m of input torque at a top speed of 19.69 rpm.
 
+## Division of Work
+
+| Team Member | Responsibility | Time Spent | Share of Group Time |
+|---|---|---|---|
+| Shamar Lindo | Motor selection, motor mount bracket and shaft coupler calculations, frame free body diagrams, floating bearing fit (RC3), bill of materials, lessons learned | 5 hours | 33.3% |
+| Matthew Cowan | CAD of the motor mount bracket, top-of-frame FEA and mesh convergence study | 6 hours | 40.0% |
+| Addison Fagan | CAD of the shaft coupler and floating bearing mounts | 4 hours | 26.7% |
+| **Total** | | **15 hours** | **100%** |
+
+### Labor Cost ($35/hour)
+
+| Team Member | Hours | Rate | Labor Cost |
+|---|---|---|---|
+| Shamar Lindo | 5 | $35/hr | $175.00 |
+| Matthew Cowan | 6 | $35/hr | $210.00 |
+| Addison Fagan | 4 | $35/hr | $140.00 |
+| **Total Labor** | **15** | | **$525.00** |
+
+Total design cost = materials $1,388.77 + labor $525.00 = **$1,913.77**.
+
 ## Motor Selection & Shaft Coupler (Shamar Lindo)
 
 For my part of the project, I selected the motor for each lead screw, sized the motor mount bracket for bearing stress, and sized the coupler that joins the motor shaft to the screw. I took the 1.28 N·m peak torque and the 0.39 to 19.69 rpm speed range from my A10 lead screw design, applied the safety factor of 4, and picked a 24 V DC gearmotor with a Ø1/2 in shaft to match the screw. Then I found the minimum bracket thickness and sized the coupler for torsional shear so the team has the exact shaft, bore and mounting dimensions for the mount and frame.
@@ -117,6 +137,38 @@ The floating bearing at the bottom of each screw is a 90 x 40 x 20 mm 6061-T6 bl
 | **Total** | | | | **$1,388.77** | |
 
 
-## Lessons Learned & Project Takeaways (Shamar Lindo)
+## CAD Models (Matthew Cowan & Addison Fagan)
 
-I learned how to turn a lead screw torque and speed requirement into motor requirements: converting rpm to rad/s, finding mechanical power with P = Tω, and applying the safety factor of 4 to the torque. I learned that a gearmotor catalog speed is listed at the rated torque, not at no load. I first read the 20 rpm as a no-load speed, which made the motor look like it would only reach 17.7 rpm under load. Checking the output power (11.30 N·m at 20 rpm is 23.7 W, about 1/20 hp, which matches the motor's rating) showed the 20 rpm is the loaded speed, so the motor runs faster at the lighter 1.28 N·m load. I also learned to apply the hollow-shaft torsion equation with the 0.577 S<sub>y</sub> shear yield limit and solve for the outer diameter at a fixed bore. Strength only needed a 14.3 mm outer diameter, so the standard 25.4 mm size is controlled by the keyway, set screws and bore fit rather than by stress.
+CAD files: [Download here](https://drive.google.com/drive/folders/11NUC6_O0yFwdTsm7OPtAj0yD82XjbdiC?usp=sharing)
+
+![Motor mount bracket](a11_cad_mount.png)
+
+Motor mount bracket built to the dimensions from my calculations. (Matthew Cowan)
+
+![Shaft coupler](a11_cad_coupler.png)
+
+Shaft coupler built to the dimensions from my calculations. (Addison Fagan)
+
+![Floating bearing mounts](a11_cad_bearing.png)
+
+Floating bearing mounts. (Addison Fagan)
+
+## Top-of-Frame FEA & Mesh Convergence (Matthew Cowan)
+
+![Top rail von Mises stress and deflection](a11_fea_toprail.png)
+
+I tested the top of the frame to see how it handles the motor torque and the axial forces from the lead screws. I removed the crosshead assembly (nut and flange) and the lead screws, since the crosshead was not needed for this study and the lead screws did not mesh properly at larger mesh sizes. Instead I applied the axial force directly around the edges of the lead screw holes.
+
+In the first study the highest stress occurred around the sharp corners of the lead screw holes. This was likely caused by the sharp edges and the way the force was applied, and it does not fully represent the real design because the lead screws do not mount directly to the top of the frame as modeled. The greatest deflection occurred near the center of the top rail, as expected for bending under the applied loads. In the real assembly the lead screws would add some support and reduce the deflection. The frame showed normal bending behavior with no unexpected twisting or warping.
+
+The feet of the frame and the end faces of the top rail were fixed to represent simply supported beam conditions, a conservative loading case.
+
+Mesh issues: when I tried finer meshes I kept running into memory problems and could not render them, so the convergence study is limited to the coarser meshes.
+
+## Lessons Learned & Project Takeaways
+
+**Shamar Lindo** (Time Spent 5 hours): I learned how to turn a lead screw torque and speed requirement into motor requirements: converting rpm to rad/s, finding mechanical power with P = Tω, and applying the safety factor of 4 to the torque. I learned that a gearmotor catalog speed is listed at the rated torque, not at no load. I first read the 20 rpm as a no-load speed, which made the motor look like it would only reach 17.7 rpm under load. Checking the output power (11.30 N·m at 20 rpm is 23.7 W, about 1/20 hp, which matches the motor's rating) showed the 20 rpm is the loaded speed, so the motor runs faster at the lighter 1.28 N·m load. I also learned to apply the hollow-shaft torsion equation with the 0.577 S<sub>y</sub> shear yield limit and solve for the outer diameter at a fixed bore. Strength only needed a 14.3 mm outer diameter, so the standard 25.4 mm size is controlled by the keyway, set screws and bore fit rather than by stress.
+
+**Matthew Cowan** (Time Spent 6 hours): One of the biggest challenges was troubleshooting SolidWorks as I kept running into multiple issues spanning over days. The software frequently froze during analysis. Although I never identified the cause, I gained valuable experience troubleshooting meshes and simulation errors as I had to correct a lot of them for the initial mesh.
+
+**Addison Fagan** (Time Spent 4 hours): One important lesson I learned was how useful FEA can be in the design process. It allows engineers to test how a material will respond to different loads without physically damaging it. FEA can also reveal weaknesses in a design and show what needs to be improved. I can see myself using this knowledge in future engineering projects, including personal projects.
