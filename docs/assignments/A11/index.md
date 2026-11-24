@@ -117,14 +117,6 @@ The floating bearing at the bottom of each screw is a 90 x 40 x 20 mm 6061-T6 bl
 | **Total** | | | | **$1,388.77** | |
 
 
-## Division of Work
-
-| Team Member | Portion |
-| :-: | :-- |
-| Shamar Lindo | Motor selection and speed-torque curve, motor mount bracket (bearing stress), shaft coupler (torsion), frame connectors, top rail and vertical column hand analysis, floating bearing mount (RC3 fit), bill of materials and cost |
-| Addison Fagan | CAD models of the motor mount, coupler and floating bearing block, solid-mesh FEA of the top of the frame |
-| Matthew Cowan | CAD assembly and download link, solid-mesh FEA of the vertical frame, drawing package |
-
 ## Lessons Learned & Project Takeaways (Shamar Lindo)
 
 I learned how to turn a lead screw torque and speed requirement into motor requirements: converting rpm to rad/s, finding mechanical power with P = Tω, and applying the safety factor of 4 to the torque. I learned that a gearmotor catalog speed is listed at the rated torque, not at no load. I first read the 20 rpm as a no-load speed, which made the motor look like it would only reach 17.7 rpm under load. Checking the output power (11.30 N·m at 20 rpm is 23.7 W, about 1/20 hp, which matches the motor's rating) showed the 20 rpm is the loaded speed, so the motor runs faster at the lighter 1.28 N·m load. I also learned to apply the hollow-shaft torsion equation with the 0.577 S<sub>y</sub> shear yield limit and solve for the outer diameter at a fixed bore. Strength only needed a 14.3 mm outer diameter, so the standard 25.4 mm size is controlled by the keyway, set screws and bore fit rather than by stress.
