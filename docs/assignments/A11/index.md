@@ -79,6 +79,10 @@ For my part of the project, I selected the motor for each lead screw, sized the 
 
 I checked the frame with hand calculations and a beam-element FEA. The frame is four 2 ft McMaster 6575N25 40 mm rails (two columns, a top rail and a bottom rail) joined at the four corners with eight McMaster 5537T937 corner brackets (6063-T5 aluminum, two M8 screws each). McMaster does not publish section properties for the rail, so I used the published values for the equivalent 40 mm 40 Series profile (I = 137,870 mm⁴, A = 874.2 mm², S<sub>y</sub> = 172.4 MPa, E = 68.9 GPa). They can be replaced with the actual section properties once the frame is modeled.
 
+### Top Rail Free Body
+
+![Top rail free body diagram (Shamar Lindo)](a11_hw_toprail_fbd.png)
+
 ### Vertical Column Free Body
 
 ![Vertical column free body diagram (Shamar Lindo)](a11_hw_column_fbd.png)
